@@ -1,0 +1,28 @@
+{
+  "name": "can-ee-draws",
+  "version": "2.0.0",
+  "description": "A lightweight API for tracking Canada's Express Entry draw history.",
+  "type": "module",
+  "main": "worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "rollup -c",
+    "deploy": "wrangler deploy"
+  },
+  "keywords": [],
+  "author": "Sagun Karanjit",
+  "license": "MIT",
+  "dependencies": {
+    "hono": "^4.7.7"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250415.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "nodemon": "^3.1.9",
+    "rollup": "^4.9.6",
+    "wrangler": "^4.12.0"
+  }
+}

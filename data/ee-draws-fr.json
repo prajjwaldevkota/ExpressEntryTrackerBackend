@@ -1,0 +1,2884 @@
+{
+  "draws": [
+    {
+      "drawNumber": 360,
+      "date": "2025-08-08",
+      "invitationsIssued": 2500,
+      "minimumCRS": 481,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 359,
+      "date": "2025-08-07",
+      "invitationsIssued": 1000,
+      "minimumCRS": 534,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 358,
+      "date": "2025-08-06",
+      "invitationsIssued": 225,
+      "minimumCRS": 739,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 357,
+      "date": "2025-07-22",
+      "invitationsIssued": 4000,
+      "minimumCRS": 475,
+      "category": "Professions de la santé et des services sociaux (Version 2)",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 356,
+      "date": "2025-07-21",
+      "invitationsIssued": 202,
+      "minimumCRS": 788,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 355,
+      "date": "2025-07-08",
+      "invitationsIssued": 3000,
+      "minimumCRS": 518,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 354,
+      "date": "2025-07-07",
+      "invitationsIssued": 356,
+      "minimumCRS": 750,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 353,
+      "date": "2025-06-26",
+      "invitationsIssued": 3000,
+      "minimumCRS": 521,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 352,
+      "date": "2025-06-23",
+      "invitationsIssued": 503,
+      "minimumCRS": 742,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 351,
+      "date": "2025-06-12",
+      "invitationsIssued": 3000,
+      "minimumCRS": 529,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 350,
+      "date": "2025-06-10",
+      "invitationsIssued": 125,
+      "minimumCRS": 784,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 349,
+      "date": "2025-06-04",
+      "invitationsIssued": 500,
+      "minimumCRS": 504,
+      "category": "Professions de la santé et des services sociaux (Version 2)",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 348,
+      "date": "2025-06-02",
+      "invitationsIssued": 277,
+      "minimumCRS": 726,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 347,
+      "date": "2025-05-13",
+      "invitationsIssued": 500,
+      "minimumCRS": 547,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 346,
+      "date": "2025-05-12",
+      "invitationsIssued": 511,
+      "minimumCRS": 706,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 345,
+      "date": "2025-05-02",
+      "invitationsIssued": 500,
+      "minimumCRS": 510,
+      "category": "Professions de la santé et des services sociaux (Version 2)",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 344,
+      "date": "2025-05-01",
+      "invitationsIssued": 1000,
+      "minimumCRS": 479,
+      "category": "Professions de l’éducation (Version 1)",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 343,
+      "date": "2025-04-28",
+      "invitationsIssued": 421,
+      "minimumCRS": 727,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 342,
+      "date": "2025-04-14",
+      "invitationsIssued": 825,
+      "minimumCRS": 764,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 341,
+      "date": "2025-03-21",
+      "invitationsIssued": 7500,
+      "minimumCRS": 379,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 340,
+      "date": "2025-03-17",
+      "invitationsIssued": 536,
+      "minimumCRS": 736,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 339,
+      "date": "2025-03-06",
+      "invitationsIssued": 4500,
+      "minimumCRS": 410,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 338,
+      "date": "2025-03-03",
+      "invitationsIssued": 725,
+      "minimumCRS": 667,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 337,
+      "date": "2025-02-19",
+      "invitationsIssued": 6500,
+      "minimumCRS": 428,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 336,
+      "date": "2025-02-17",
+      "invitationsIssued": 646,
+      "minimumCRS": 750,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 335,
+      "date": "2025-02-05",
+      "invitationsIssued": 4000,
+      "minimumCRS": 521,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 334,
+      "date": "2025-02-04",
+      "invitationsIssued": 455,
+      "minimumCRS": 802,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 333,
+      "date": "2025-01-23",
+      "invitationsIssued": 4000,
+      "minimumCRS": 527,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 332,
+      "date": "2025-01-08",
+      "invitationsIssued": 1350,
+      "minimumCRS": 542,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 331,
+      "date": "2025-01-07",
+      "invitationsIssued": 471,
+      "minimumCRS": 793,
+      "category": "Programme des candidats des provinces",
+      "year": "2025"
+    },
+    {
+      "drawNumber": 330,
+      "date": "2024-12-16",
+      "invitationsIssued": 1085,
+      "minimumCRS": 727,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 329,
+      "date": "2024-12-03",
+      "invitationsIssued": 800,
+      "minimumCRS": 466,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 328,
+      "date": "2024-12-02",
+      "invitationsIssued": 676,
+      "minimumCRS": 705,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 327,
+      "date": "2024-11-20",
+      "invitationsIssued": 3000,
+      "minimumCRS": 463,
+      "category": "Professions de la santé (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 326,
+      "date": "2024-11-19",
+      "invitationsIssued": 400,
+      "minimumCRS": 539,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 325,
+      "date": "2024-11-18",
+      "invitationsIssued": 174,
+      "minimumCRS": 816,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 324,
+      "date": "2024-11-15",
+      "invitationsIssued": 800,
+      "minimumCRS": 478,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 323,
+      "date": "2024-11-13",
+      "invitationsIssued": 400,
+      "minimumCRS": 547,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 322,
+      "date": "2024-11-12",
+      "invitationsIssued": 733,
+      "minimumCRS": 812,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 321,
+      "date": "2024-10-23",
+      "invitationsIssued": 1800,
+      "minimumCRS": 433,
+      "category": "Métiers (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 320,
+      "date": "2024-10-22",
+      "invitationsIssued": 400,
+      "minimumCRS": 539,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 319,
+      "date": "2024-10-21",
+      "invitationsIssued": 648,
+      "minimumCRS": 791,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 318,
+      "date": "2024-10-10",
+      "invitationsIssued": 1000,
+      "minimumCRS": 444,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 317,
+      "date": "2024-10-09",
+      "invitationsIssued": 500,
+      "minimumCRS": 539,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 316,
+      "date": "2024-10-07",
+      "invitationsIssued": 1613,
+      "minimumCRS": 743,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 315,
+      "date": "2024-09-19",
+      "invitationsIssued": 4000,
+      "minimumCRS": 509,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 314,
+      "date": "2024-09-13",
+      "invitationsIssued": 1000,
+      "minimumCRS": 446,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 313,
+      "date": "2024-09-09",
+      "invitationsIssued": 911,
+      "minimumCRS": 732,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 312,
+      "date": "2024-08-27",
+      "invitationsIssued": 3300,
+      "minimumCRS": 507,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 311,
+      "date": "2024-08-26",
+      "invitationsIssued": 1121,
+      "minimumCRS": 694,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 310,
+      "date": "2024-08-15",
+      "invitationsIssued": 2000,
+      "minimumCRS": 394,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 309,
+      "date": "2024-08-14",
+      "invitationsIssued": 3200,
+      "minimumCRS": 509,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 308,
+      "date": "2024-08-13",
+      "invitationsIssued": 763,
+      "minimumCRS": 690,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 307,
+      "date": "2024-07-31",
+      "invitationsIssued": 5000,
+      "minimumCRS": 510,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 306,
+      "date": "2024-07-30",
+      "invitationsIssued": 964,
+      "minimumCRS": 686,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 305,
+      "date": "2024-07-18",
+      "invitationsIssued": 1800,
+      "minimumCRS": 400,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 304,
+      "date": "2024-07-17",
+      "invitationsIssued": 6300,
+      "minimumCRS": 515,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 303,
+      "date": "2024-07-16",
+      "invitationsIssued": 1391,
+      "minimumCRS": 670,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 302,
+      "date": "2024-07-08",
+      "invitationsIssued": 3200,
+      "minimumCRS": 420,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 301,
+      "date": "2024-07-05",
+      "invitationsIssued": 3750,
+      "minimumCRS": 445,
+      "category": "Professions de la santé (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 300,
+      "date": "2024-07-04",
+      "invitationsIssued": 1800,
+      "minimumCRS": 436,
+      "category": "Métiers (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 299,
+      "date": "2024-07-02",
+      "invitationsIssued": 920,
+      "minimumCRS": 739,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 298,
+      "date": "2024-06-19",
+      "invitationsIssued": 1499,
+      "minimumCRS": 663,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 297,
+      "date": "2024-05-31",
+      "invitationsIssued": 3000,
+      "minimumCRS": 522,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 296,
+      "date": "2024-05-30",
+      "invitationsIssued": 2985,
+      "minimumCRS": 676,
+      "category": "Programme des candidats des provinces",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 295,
+      "date": "2024-04-24",
+      "invitationsIssued": 1400,
+      "minimumCRS": 410,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 294,
+      "date": "2024-04-23",
+      "invitationsIssued": 2095,
+      "minimumCRS": 529,
+      "category": "Générale",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 293,
+      "date": "2024-04-11",
+      "invitationsIssued": 4500,
+      "minimumCRS": 491,
+      "category": "Professions des STIM (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 292,
+      "date": "2024-04-10",
+      "invitationsIssued": 1280,
+      "minimumCRS": 549,
+      "category": "Générale",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 291,
+      "date": "2024-03-26",
+      "invitationsIssued": 1500,
+      "minimumCRS": 388,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 290,
+      "date": "2024-03-25",
+      "invitationsIssued": 1980,
+      "minimumCRS": 524,
+      "category": "Générale",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 289,
+      "date": "2024-03-13",
+      "invitationsIssued": 975,
+      "minimumCRS": 430,
+      "category": "Métiers des transports (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 288,
+      "date": "2024-03-12",
+      "invitationsIssued": 2850,
+      "minimumCRS": 525,
+      "category": "Générale",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 287,
+      "date": "2024-02-29",
+      "invitationsIssued": 2500,
+      "minimumCRS": 336,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 286,
+      "date": "2024-02-28",
+      "invitationsIssued": 1470,
+      "minimumCRS": 534,
+      "category": "Générale",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 285,
+      "date": "2024-02-16",
+      "invitationsIssued": 150,
+      "minimumCRS": 437,
+      "category": "Métiers de l'agriculture et de l'agroalimentaire (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 284,
+      "date": "2024-02-14",
+      "invitationsIssued": 3500,
+      "minimumCRS": 422,
+      "category": "Professions de la santé (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 283,
+      "date": "2024-02-13",
+      "invitationsIssued": 1490,
+      "minimumCRS": 535,
+      "category": "Générale",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 282,
+      "date": "2024-02-01",
+      "invitationsIssued": 7000,
+      "minimumCRS": 365,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 281,
+      "date": "2024-01-31",
+      "invitationsIssued": 730,
+      "minimumCRS": 541,
+      "category": "Générale",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 280,
+      "date": "2024-01-23",
+      "invitationsIssued": 1040,
+      "minimumCRS": 543,
+      "category": "Générale",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 279,
+      "date": "2024-01-10",
+      "invitationsIssued": 1510,
+      "minimumCRS": 546,
+      "category": "Générale",
+      "year": "2024"
+    },
+    {
+      "drawNumber": 278,
+      "date": "2023-12-21",
+      "invitationsIssued": 400,
+      "minimumCRS": 386,
+      "category": "Métiers de l'agriculture et de l'agroalimentaire (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 277,
+      "date": "2023-12-20",
+      "invitationsIssued": 670,
+      "minimumCRS": 435,
+      "category": "Métiers des transports (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 276,
+      "date": "2023-12-19",
+      "invitationsIssued": 1000,
+      "minimumCRS": 425,
+      "category": "Métiers (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 275,
+      "date": "2023-12-18",
+      "invitationsIssued": 1325,
+      "minimumCRS": 542,
+      "category": "Générale",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 274,
+      "date": "2023-12-08",
+      "invitationsIssued": 5900,
+      "minimumCRS": 481,
+      "category": "Professions des STIM (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 273,
+      "date": "2023-12-07",
+      "invitationsIssued": 1000,
+      "minimumCRS": 470,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 272,
+      "date": "2023-12-06",
+      "invitationsIssued": 4750,
+      "minimumCRS": 561,
+      "category": "Générale",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 271,
+      "date": "2023-10-26",
+      "invitationsIssued": 3600,
+      "minimumCRS": 431,
+      "category": "Professions de la santé (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 270,
+      "date": "2023-10-25",
+      "invitationsIssued": 300,
+      "minimumCRS": 486,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 269,
+      "date": "2023-10-24",
+      "invitationsIssued": 1548,
+      "minimumCRS": 776,
+      "category": "Programme des candidats des provinces",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 268,
+      "date": "2023-10-10",
+      "invitationsIssued": 3725,
+      "minimumCRS": 500,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 267,
+      "date": "2023-09-28",
+      "invitationsIssued": 600,
+      "minimumCRS": 354,
+      "category": "Métiers de l'agriculture et de l'agroalimentaire (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 266,
+      "date": "2023-09-27",
+      "invitationsIssued": 500,
+      "minimumCRS": 472,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 265,
+      "date": "2023-09-26",
+      "invitationsIssued": 3000,
+      "minimumCRS": 504,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 264,
+      "date": "2023-09-20",
+      "invitationsIssued": 1000,
+      "minimumCRS": 435,
+      "category": "Métiers des transports (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 263,
+      "date": "2023-09-19",
+      "invitationsIssued": 3200,
+      "minimumCRS": 531,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 262,
+      "date": "2023-08-15",
+      "invitationsIssued": 4300,
+      "minimumCRS": 496,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 261,
+      "date": "2023-08-03",
+      "invitationsIssued": 1500,
+      "minimumCRS": 388,
+      "category": "Métiers spécialisés (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 260,
+      "date": "2023-08-02",
+      "invitationsIssued": 800,
+      "minimumCRS": 435,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 259,
+      "date": "2023-08-01",
+      "invitationsIssued": 2000,
+      "minimumCRS": 517,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 258,
+      "date": "2023-07-12",
+      "invitationsIssued": 3800,
+      "minimumCRS": 375,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 257,
+      "date": "2023-07-11",
+      "invitationsIssued": 800,
+      "minimumCRS": 505,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 256,
+      "date": "2023-07-07",
+      "invitationsIssued": 2300,
+      "minimumCRS": 439,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 255,
+      "date": "2023-07-06",
+      "invitationsIssued": 1500,
+      "minimumCRS": 463,
+      "category": "Professions de la santé (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 254,
+      "date": "2023-07-05",
+      "invitationsIssued": 500,
+      "minimumCRS": 486,
+      "category": "Professions des STIM (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 253,
+      "date": "2023-07-04",
+      "invitationsIssued": 700,
+      "minimumCRS": 511,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 252,
+      "date": "2023-06-28",
+      "invitationsIssued": 500,
+      "minimumCRS": 476,
+      "category": "Professions de la santé (Version 1)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 251,
+      "date": "2023-06-27",
+      "invitationsIssued": 4300,
+      "minimumCRS": 486,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 250,
+      "date": "2023-06-08",
+      "invitationsIssued": 4800,
+      "minimumCRS": 486,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 249,
+      "date": "2023-05-24",
+      "invitationsIssued": 4800,
+      "minimumCRS": 488,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 248,
+      "date": "2023-05-10",
+      "invitationsIssued": 589,
+      "minimumCRS": 691,
+      "category": "Programme des candidats des provinces",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 247,
+      "date": "2023-04-26",
+      "invitationsIssued": 3500,
+      "minimumCRS": 483,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 246,
+      "date": "2023-04-12",
+      "invitationsIssued": 3500,
+      "minimumCRS": 486,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 245,
+      "date": "2023-03-29",
+      "invitationsIssued": 7000,
+      "minimumCRS": 481,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 244,
+      "date": "2023-03-23",
+      "invitationsIssued": 7000,
+      "minimumCRS": 484,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 243,
+      "date": "2023-03-15",
+      "invitationsIssued": 7000,
+      "minimumCRS": 490,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 242,
+      "date": "2023-03-01",
+      "invitationsIssued": 667,
+      "minimumCRS": 748,
+      "category": "Programme des candidats des provinces",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 241,
+      "date": "2023-02-15",
+      "invitationsIssued": 699,
+      "minimumCRS": 791,
+      "category": "Programme des candidats des provinces",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 240,
+      "date": "2023-02-02",
+      "invitationsIssued": 3300,
+      "minimumCRS": 489,
+      "category": "Programme des travailleurs qualifiés (fédéral)",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 239,
+      "date": "2023-02-01",
+      "invitationsIssued": 893,
+      "minimumCRS": 733,
+      "category": "Programme des candidats des provinces",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 238,
+      "date": "2023-01-18",
+      "invitationsIssued": 5500,
+      "minimumCRS": 490,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 237,
+      "date": "2023-01-11",
+      "invitationsIssued": 5500,
+      "minimumCRS": 507,
+      "category": "Aucun programme spécifié",
+      "year": "2023"
+    },
+    {
+      "drawNumber": 236,
+      "date": "2022-11-23",
+      "invitationsIssued": 4750,
+      "minimumCRS": 491,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 235,
+      "date": "2022-11-09",
+      "invitationsIssued": 4750,
+      "minimumCRS": 494,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 234,
+      "date": "2022-10-26",
+      "invitationsIssued": 4750,
+      "minimumCRS": 496,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 233,
+      "date": "2022-10-12",
+      "invitationsIssued": 4250,
+      "minimumCRS": 500,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 232,
+      "date": "2022-09-28",
+      "invitationsIssued": 3750,
+      "minimumCRS": 504,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 231,
+      "date": "2022-09-14",
+      "invitationsIssued": 3250,
+      "minimumCRS": 510,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 230,
+      "date": "2022-08-31",
+      "invitationsIssued": 2750,
+      "minimumCRS": 516,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 229,
+      "date": "2022-08-17",
+      "invitationsIssued": 2250,
+      "minimumCRS": 525,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 228,
+      "date": "2022-08-03",
+      "invitationsIssued": 2000,
+      "minimumCRS": 533,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 227,
+      "date": "2022-07-20",
+      "invitationsIssued": 1750,
+      "minimumCRS": 542,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 226,
+      "date": "2022-07-06",
+      "invitationsIssued": 1500,
+      "minimumCRS": 557,
+      "category": "Aucun programme spécifié",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 225,
+      "date": "2022-06-22",
+      "invitationsIssued": 636,
+      "minimumCRS": 752,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 224,
+      "date": "2022-06-08",
+      "invitationsIssued": 932,
+      "minimumCRS": 796,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 223,
+      "date": "2022-05-25",
+      "invitationsIssued": 590,
+      "minimumCRS": 741,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 222,
+      "date": "2022-05-11",
+      "invitationsIssued": 545,
+      "minimumCRS": 753,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 221,
+      "date": "2022-04-27",
+      "invitationsIssued": 829,
+      "minimumCRS": 772,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 220,
+      "date": "2022-04-13",
+      "invitationsIssued": 787,
+      "minimumCRS": 782,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 219,
+      "date": "2022-03-30",
+      "invitationsIssued": 919,
+      "minimumCRS": 785,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 218,
+      "date": "2022-03-16",
+      "invitationsIssued": 924,
+      "minimumCRS": 754,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 217,
+      "date": "2022-03-02",
+      "invitationsIssued": 1047,
+      "minimumCRS": 761,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 216,
+      "date": "2022-02-16",
+      "invitationsIssued": 1082,
+      "minimumCRS": 710,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 215,
+      "date": "2022-02-02",
+      "invitationsIssued": 1070,
+      "minimumCRS": 674,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 214,
+      "date": "2022-01-19",
+      "invitationsIssued": 1036,
+      "minimumCRS": 745,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 213,
+      "date": "2022-01-05",
+      "invitationsIssued": 392,
+      "minimumCRS": 808,
+      "category": "Programme des candidats des provinces",
+      "year": "2022"
+    },
+    {
+      "drawNumber": 212,
+      "date": "2021-12-22",
+      "invitationsIssued": 746,
+      "minimumCRS": 720,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 211,
+      "date": "2021-12-10",
+      "invitationsIssued": 1032,
+      "minimumCRS": 698,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 210,
+      "date": "2021-11-24",
+      "invitationsIssued": 613,
+      "minimumCRS": 737,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 209,
+      "date": "2021-11-10",
+      "invitationsIssued": 775,
+      "minimumCRS": 685,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 208,
+      "date": "2021-10-27",
+      "invitationsIssued": 681,
+      "minimumCRS": 744,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 207,
+      "date": "2021-10-13",
+      "invitationsIssued": 681,
+      "minimumCRS": 720,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 206,
+      "date": "2021-09-29",
+      "invitationsIssued": 761,
+      "minimumCRS": 742,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 205,
+      "date": "2021-09-15",
+      "invitationsIssued": 521,
+      "minimumCRS": 732,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 204,
+      "date": "2021-09-14",
+      "invitationsIssued": 2000,
+      "minimumCRS": 462,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 203,
+      "date": "2021-09-01",
+      "invitationsIssued": 635,
+      "minimumCRS": 764,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 202,
+      "date": "2021-08-19",
+      "invitationsIssued": 3000,
+      "minimumCRS": 403,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 201,
+      "date": "2021-08-18",
+      "invitationsIssued": 463,
+      "minimumCRS": 751,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 200,
+      "date": "2021-08-05",
+      "invitationsIssued": 3000,
+      "minimumCRS": 404,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 199,
+      "date": "2021-08-04",
+      "invitationsIssued": 512,
+      "minimumCRS": 760,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 198,
+      "date": "2021-07-22",
+      "invitationsIssued": 4500,
+      "minimumCRS": 357,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 197,
+      "date": "2021-07-21",
+      "invitationsIssued": 462,
+      "minimumCRS": 734,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 196,
+      "date": "2021-07-08",
+      "invitationsIssued": 4500,
+      "minimumCRS": 369,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 195,
+      "date": "2021-07-07",
+      "invitationsIssued": 627,
+      "minimumCRS": 760,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 194,
+      "date": "2021-06-24",
+      "invitationsIssued": 6000,
+      "minimumCRS": 357,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 193,
+      "date": "2021-06-23",
+      "invitationsIssued": 1002,
+      "minimumCRS": 742,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 192,
+      "date": "2021-06-10",
+      "invitationsIssued": 6000,
+      "minimumCRS": 368,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 191,
+      "date": "2021-06-09",
+      "invitationsIssued": 940,
+      "minimumCRS": 711,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 190,
+      "date": "2021-05-31",
+      "invitationsIssued": 5956,
+      "minimumCRS": 380,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 189,
+      "date": "2021-05-26",
+      "invitationsIssued": 500,
+      "minimumCRS": 713,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 188,
+      "date": "2021-05-20",
+      "invitationsIssued": 1842,
+      "minimumCRS": 397,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 187,
+      "date": "2021-05-13",
+      "invitationsIssued": 4147,
+      "minimumCRS": 401,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 186,
+      "date": "2021-05-12",
+      "invitationsIssued": 557,
+      "minimumCRS": 752,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 185,
+      "date": "2021-04-29",
+      "invitationsIssued": 6000,
+      "minimumCRS": 400,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 184,
+      "date": "2021-04-28",
+      "invitationsIssued": 381,
+      "minimumCRS": 717,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 183,
+      "date": "2021-04-16",
+      "invitationsIssued": 6000,
+      "minimumCRS": 417,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 182,
+      "date": "2021-04-14",
+      "invitationsIssued": 266,
+      "minimumCRS": 753,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 181,
+      "date": "2021-04-01",
+      "invitationsIssued": 5000,
+      "minimumCRS": 432,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 180,
+      "date": "2021-03-31",
+      "invitationsIssued": 284,
+      "minimumCRS": 778,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 179,
+      "date": "2021-03-18",
+      "invitationsIssued": 5000,
+      "minimumCRS": 449,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 178,
+      "date": "2021-03-17",
+      "invitationsIssued": 183,
+      "minimumCRS": 682,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 177,
+      "date": "2021-03-08",
+      "invitationsIssued": 671,
+      "minimumCRS": 739,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 176,
+      "date": "2021-02-13",
+      "invitationsIssued": 27332,
+      "minimumCRS": 75,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 175,
+      "date": "2021-02-10",
+      "invitationsIssued": 654,
+      "minimumCRS": 720,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 174,
+      "date": "2021-01-21",
+      "invitationsIssued": 4626,
+      "minimumCRS": 454,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 173,
+      "date": "2021-01-20",
+      "invitationsIssued": 374,
+      "minimumCRS": 741,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 172,
+      "date": "2021-01-07",
+      "invitationsIssued": 4750,
+      "minimumCRS": 461,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 171,
+      "date": "2021-01-06",
+      "invitationsIssued": 250,
+      "minimumCRS": 813,
+      "category": "Programme des candidats des provinces",
+      "year": "2021"
+    },
+    {
+      "drawNumber": 170,
+      "date": "2020-12-23",
+      "invitationsIssued": 5000,
+      "minimumCRS": 468,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 169,
+      "date": "2020-12-09",
+      "invitationsIssued": 5000,
+      "minimumCRS": 469,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 168,
+      "date": "2020-11-25",
+      "invitationsIssued": 5000,
+      "minimumCRS": 469,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 167,
+      "date": "2020-11-18",
+      "invitationsIssued": 5000,
+      "minimumCRS": 472,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 166,
+      "date": "2020-11-05",
+      "invitationsIssued": 4500,
+      "minimumCRS": 478,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 165,
+      "date": "2020-10-14",
+      "invitationsIssued": 4500,
+      "minimumCRS": 471,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 164,
+      "date": "2020-09-30",
+      "invitationsIssued": 4200,
+      "minimumCRS": 471,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 163,
+      "date": "2020-09-16",
+      "invitationsIssued": 4200,
+      "minimumCRS": 472,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 162,
+      "date": "2020-09-02",
+      "invitationsIssued": 4200,
+      "minimumCRS": 475,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 161,
+      "date": "2020-08-20",
+      "invitationsIssued": 3300,
+      "minimumCRS": 454,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 160,
+      "date": "2020-08-19",
+      "invitationsIssued": 600,
+      "minimumCRS": 771,
+      "category": "Programme des candidats des provinces",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 159,
+      "date": "2020-08-06",
+      "invitationsIssued": 250,
+      "minimumCRS": 415,
+      "category": "Programme des travailleurs de métiers spécialisés (fédéral)",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 158,
+      "date": "2020-08-05",
+      "invitationsIssued": 3900,
+      "minimumCRS": 476,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 157,
+      "date": "2020-07-23",
+      "invitationsIssued": 3343,
+      "minimumCRS": 445,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 156,
+      "date": "2020-07-22",
+      "invitationsIssued": 557,
+      "minimumCRS": 687,
+      "category": "Programme des candidats des provinces",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 155,
+      "date": "2020-07-08",
+      "invitationsIssued": 3900,
+      "minimumCRS": 478,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 154,
+      "date": "2020-06-25",
+      "invitationsIssued": 3508,
+      "minimumCRS": 431,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 153,
+      "date": "2020-06-24",
+      "invitationsIssued": 392,
+      "minimumCRS": 696,
+      "category": "Programme des candidats des provinces",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 152,
+      "date": "2020-06-11",
+      "invitationsIssued": 3559,
+      "minimumCRS": 437,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 151,
+      "date": "2020-06-10",
+      "invitationsIssued": 341,
+      "minimumCRS": 743,
+      "category": "Programme des candidats des provinces",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 150,
+      "date": "2020-05-28",
+      "invitationsIssued": 3515,
+      "minimumCRS": 440,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 149,
+      "date": "2020-05-27",
+      "invitationsIssued": 385,
+      "minimumCRS": 757,
+      "category": "Programme des candidats des provinces",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 148,
+      "date": "2020-05-14",
+      "invitationsIssued": 3371,
+      "minimumCRS": 447,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 147,
+      "date": "2020-05-13",
+      "invitationsIssued": 529,
+      "minimumCRS": 718,
+      "category": "Programme des candidats des provinces",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 146,
+      "date": "2020-04-30",
+      "invitationsIssued": 3311,
+      "minimumCRS": 452,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 145,
+      "date": "2020-04-29",
+      "invitationsIssued": 589,
+      "minimumCRS": 692,
+      "category": "Programme des candidats des provinces",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 144,
+      "date": "2020-04-16",
+      "invitationsIssued": 3782,
+      "minimumCRS": 455,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 143,
+      "date": "2020-04-15",
+      "invitationsIssued": 118,
+      "minimumCRS": 808,
+      "category": "Programme des candidats des provinces",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 142,
+      "date": "2020-04-09",
+      "invitationsIssued": 3294,
+      "minimumCRS": 464,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 141,
+      "date": "2020-04-09",
+      "invitationsIssued": 606,
+      "minimumCRS": 698,
+      "category": "Programme des candidats des provinces",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 140,
+      "date": "2020-03-23",
+      "invitationsIssued": 3232,
+      "minimumCRS": 467,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 139,
+      "date": "2020-03-18",
+      "invitationsIssued": 668,
+      "minimumCRS": 720,
+      "category": "Programme des candidats des provinces",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 138,
+      "date": "2020-03-04",
+      "invitationsIssued": 3900,
+      "minimumCRS": 471,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 137,
+      "date": "2020-02-19",
+      "invitationsIssued": 4500,
+      "minimumCRS": 470,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 136,
+      "date": "2020-02-05",
+      "invitationsIssued": 3500,
+      "minimumCRS": 472,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 135,
+      "date": "2020-01-22",
+      "invitationsIssued": 3400,
+      "minimumCRS": 471,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 134,
+      "date": "2020-01-08",
+      "invitationsIssued": 3400,
+      "minimumCRS": 473,
+      "category": "Aucun programme spécifié",
+      "year": "2020"
+    },
+    {
+      "drawNumber": 133,
+      "date": "2019-12-19",
+      "invitationsIssued": 3200,
+      "minimumCRS": 469,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 132,
+      "date": "2019-12-11",
+      "invitationsIssued": 3200,
+      "minimumCRS": 472,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 131,
+      "date": "2019-11-27",
+      "invitationsIssued": 3600,
+      "minimumCRS": 471,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 130,
+      "date": "2019-11-13",
+      "invitationsIssued": 3600,
+      "minimumCRS": 472,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 129,
+      "date": "2019-10-30",
+      "invitationsIssued": 3900,
+      "minimumCRS": 475,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 128,
+      "date": "2019-10-16",
+      "invitationsIssued": 500,
+      "minimumCRS": 357,
+      "category": "Programme des travailleurs de métiers spécialisés (fédéral)",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 127,
+      "date": "2019-10-02",
+      "invitationsIssued": 3900,
+      "minimumCRS": 464,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 126,
+      "date": "2019-09-18",
+      "invitationsIssued": 3600,
+      "minimumCRS": 462,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 125,
+      "date": "2019-09-04",
+      "invitationsIssued": 3600,
+      "minimumCRS": 463,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 124,
+      "date": "2019-08-20",
+      "invitationsIssued": 3600,
+      "minimumCRS": 457,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 123,
+      "date": "2019-08-12",
+      "invitationsIssued": 3600,
+      "minimumCRS": 466,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 122,
+      "date": "2019-07-24",
+      "invitationsIssued": 3600,
+      "minimumCRS": 459,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 121,
+      "date": "2019-07-10",
+      "invitationsIssued": 3600,
+      "minimumCRS": 460,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 120,
+      "date": "2019-06-26",
+      "invitationsIssued": 3350,
+      "minimumCRS": 462,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 119,
+      "date": "2019-06-12",
+      "invitationsIssued": 3350,
+      "minimumCRS": 465,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 118,
+      "date": "2019-05-29",
+      "invitationsIssued": 3350,
+      "minimumCRS": 470,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 117,
+      "date": "2019-05-15",
+      "invitationsIssued": 500,
+      "minimumCRS": 332,
+      "category": "Programme des travailleurs de métiers spécialisés (fédéral)",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 116,
+      "date": "2019-05-01",
+      "invitationsIssued": 3350,
+      "minimumCRS": 450,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 115,
+      "date": "2019-04-17",
+      "invitationsIssued": 3350,
+      "minimumCRS": 451,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 114,
+      "date": "2019-04-03",
+      "invitationsIssued": 3350,
+      "minimumCRS": 451,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 113,
+      "date": "2019-03-20",
+      "invitationsIssued": 3350,
+      "minimumCRS": 452,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 112,
+      "date": "2019-03-06",
+      "invitationsIssued": 3350,
+      "minimumCRS": 454,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 111,
+      "date": "2019-02-20",
+      "invitationsIssued": 3350,
+      "minimumCRS": 457,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 110,
+      "date": "2019-01-30",
+      "invitationsIssued": 3350,
+      "minimumCRS": 438,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 109,
+      "date": "2019-01-23",
+      "invitationsIssued": 3900,
+      "minimumCRS": 443,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 108,
+      "date": "2019-01-09",
+      "invitationsIssued": 3900,
+      "minimumCRS": 449,
+      "category": "Aucun programme spécifié",
+      "year": "2019"
+    },
+    {
+      "drawNumber": 107,
+      "date": "2018-12-19",
+      "invitationsIssued": 3900,
+      "minimumCRS": 439,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 106,
+      "date": "2018-12-12",
+      "invitationsIssued": 3900,
+      "minimumCRS": 445,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 105,
+      "date": "2018-11-28",
+      "invitationsIssued": 3900,
+      "minimumCRS": 445,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 104,
+      "date": "2018-11-14",
+      "invitationsIssued": 3900,
+      "minimumCRS": 449,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 103,
+      "date": "2018-10-29",
+      "invitationsIssued": 3900,
+      "minimumCRS": 442,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 102,
+      "date": "2018-10-15",
+      "invitationsIssued": 3900,
+      "minimumCRS": 440,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 101,
+      "date": "2018-10-03",
+      "invitationsIssued": 3900,
+      "minimumCRS": 445,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 100,
+      "date": "2018-09-24",
+      "invitationsIssued": 400,
+      "minimumCRS": 284,
+      "category": "Programme des travailleurs de métiers spécialisés (fédéral)",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 99,
+      "date": "2018-09-19",
+      "invitationsIssued": 3500,
+      "minimumCRS": 441,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 98,
+      "date": "2018-09-05",
+      "invitationsIssued": 3900,
+      "minimumCRS": 440,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 97,
+      "date": "2018-08-22",
+      "invitationsIssued": 3750,
+      "minimumCRS": 440,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 96,
+      "date": "2018-08-08",
+      "invitationsIssued": 3750,
+      "minimumCRS": 440,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 95,
+      "date": "2018-07-25",
+      "invitationsIssued": 3750,
+      "minimumCRS": 441,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 94,
+      "date": "2018-07-11",
+      "invitationsIssued": 3750,
+      "minimumCRS": 442,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 93,
+      "date": "2018-06-25",
+      "invitationsIssued": 3750,
+      "minimumCRS": 442,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 92,
+      "date": "2018-06-13",
+      "invitationsIssued": 3750,
+      "minimumCRS": 451,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 91,
+      "date": "2018-05-30",
+      "invitationsIssued": 200,
+      "minimumCRS": 902,
+      "category": "Programme des candidats des provinces",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 90,
+      "date": "2018-05-23",
+      "invitationsIssued": 3500,
+      "minimumCRS": 440,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 89,
+      "date": "2018-05-09",
+      "invitationsIssued": 3500,
+      "minimumCRS": 441,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 88,
+      "date": "2018-04-25",
+      "invitationsIssued": 3500,
+      "minimumCRS": 441,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 87,
+      "date": "2018-04-11",
+      "invitationsIssued": 3500,
+      "minimumCRS": 444,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 86,
+      "date": "2018-03-26",
+      "invitationsIssued": 3000,
+      "minimumCRS": 446,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 85,
+      "date": "2018-03-14",
+      "invitationsIssued": 3000,
+      "minimumCRS": 456,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 84,
+      "date": "2018-02-21",
+      "invitationsIssued": 3000,
+      "minimumCRS": 442,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 83,
+      "date": "2018-02-07",
+      "invitationsIssued": 3000,
+      "minimumCRS": 442,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 82,
+      "date": "2018-01-24",
+      "invitationsIssued": 2750,
+      "minimumCRS": 444,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 81,
+      "date": "2018-01-10",
+      "invitationsIssued": 2750,
+      "minimumCRS": 446,
+      "category": "Aucun programme spécifié",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 80,
+      "date": "2017-12-20",
+      "invitationsIssued": 2750,
+      "minimumCRS": 446,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 79,
+      "date": "2017-12-06",
+      "invitationsIssued": 2750,
+      "minimumCRS": 452,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 78,
+      "date": "2017-11-15",
+      "invitationsIssued": 2750,
+      "minimumCRS": 439,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 77,
+      "date": "2017-11-08",
+      "invitationsIssued": 2000,
+      "minimumCRS": 458,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 76,
+      "date": "2017-11-01",
+      "invitationsIssued": 505,
+      "minimumCRS": 241,
+      "category": "Programme des travailleurs de métiers spécialisés (fédéral)",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 75,
+      "date": "2017-11-01",
+      "invitationsIssued": 290,
+      "minimumCRS": 673,
+      "category": "Programme des candidats des provinces",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 74,
+      "date": "2017-10-18",
+      "invitationsIssued": 2757,
+      "minimumCRS": 436,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 73,
+      "date": "2017-10-04",
+      "invitationsIssued": 2801,
+      "minimumCRS": 438,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 72,
+      "date": "2017-09-20",
+      "invitationsIssued": 2871,
+      "minimumCRS": 433,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 71,
+      "date": "2017-09-06",
+      "invitationsIssued": 2772,
+      "minimumCRS": 435,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 70,
+      "date": "2017-08-23",
+      "invitationsIssued": 3035,
+      "minimumCRS": 434,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 69,
+      "date": "2017-08-09",
+      "invitationsIssued": 2991,
+      "minimumCRS": 433,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 68,
+      "date": "2017-08-02",
+      "invitationsIssued": 3264,
+      "minimumCRS": 441,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 67,
+      "date": "2017-07-12",
+      "invitationsIssued": 3202,
+      "minimumCRS": 440,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 66,
+      "date": "2017-06-28",
+      "invitationsIssued": 3409,
+      "minimumCRS": 449,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 65,
+      "date": "2017-05-31",
+      "invitationsIssued": 3877,
+      "minimumCRS": 413,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 64,
+      "date": "2017-05-26",
+      "invitationsIssued": 400,
+      "minimumCRS": 199,
+      "category": "Programme des travailleurs de métiers spécialisés (fédéral)",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 63,
+      "date": "2017-05-26",
+      "invitationsIssued": 143,
+      "minimumCRS": 775,
+      "category": "Programme des candidats des provinces",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 62,
+      "date": "2017-05-17",
+      "invitationsIssued": 3687,
+      "minimumCRS": 415,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 61,
+      "date": "2017-05-04",
+      "invitationsIssued": 3796,
+      "minimumCRS": 423,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 60,
+      "date": "2017-04-19",
+      "invitationsIssued": 3665,
+      "minimumCRS": 415,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 59,
+      "date": "2017-04-12",
+      "invitationsIssued": 3923,
+      "minimumCRS": 423,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 58,
+      "date": "2017-04-05",
+      "invitationsIssued": 3753,
+      "minimumCRS": 431,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 57,
+      "date": "2017-03-24",
+      "invitationsIssued": 3749,
+      "minimumCRS": 441,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 56,
+      "date": "2017-03-01",
+      "invitationsIssued": 3884,
+      "minimumCRS": 434,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 55,
+      "date": "2017-02-22",
+      "invitationsIssued": 3611,
+      "minimumCRS": 441,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 54,
+      "date": "2017-02-08",
+      "invitationsIssued": 3644,
+      "minimumCRS": 447,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 53,
+      "date": "2017-01-25",
+      "invitationsIssued": 3508,
+      "minimumCRS": 453,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 52,
+      "date": "2017-01-11",
+      "invitationsIssued": 3334,
+      "minimumCRS": 459,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 51,
+      "date": "2017-01-04",
+      "invitationsIssued": 2902,
+      "minimumCRS": 468,
+      "category": "Aucun programme spécifié",
+      "year": "2017"
+    },
+    {
+      "drawNumber": 50,
+      "date": "2016-12-22",
+      "invitationsIssued": 2878,
+      "minimumCRS": 475,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 49,
+      "date": "2016-12-16",
+      "invitationsIssued": 1936,
+      "minimumCRS": 497,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 48,
+      "date": "2016-11-30",
+      "invitationsIssued": 559,
+      "minimumCRS": 786,
+      "category": "Programme des candidats des provinces",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 47,
+      "date": "2016-11-16",
+      "invitationsIssued": 2427,
+      "minimumCRS": 470,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 46,
+      "date": "2016-11-02",
+      "invitationsIssued": 2080,
+      "minimumCRS": 472,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 45,
+      "date": "2016-10-19",
+      "invitationsIssued": 1804,
+      "minimumCRS": 475,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 44,
+      "date": "2016-10-12",
+      "invitationsIssued": 1518,
+      "minimumCRS": 484,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 43,
+      "date": "2016-09-21",
+      "invitationsIssued": 1288,
+      "minimumCRS": 483,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 42,
+      "date": "2016-09-07",
+      "invitationsIssued": 1000,
+      "minimumCRS": 491,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 41,
+      "date": "2016-08-24",
+      "invitationsIssued": 750,
+      "minimumCRS": 538,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 40,
+      "date": "2016-08-10",
+      "invitationsIssued": 754,
+      "minimumCRS": 490,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 39,
+      "date": "2016-07-27",
+      "invitationsIssued": 755,
+      "minimumCRS": 488,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 38,
+      "date": "2016-07-13",
+      "invitationsIssued": 747,
+      "minimumCRS": 482,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 37,
+      "date": "2016-06-29",
+      "invitationsIssued": 773,
+      "minimumCRS": 482,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 36,
+      "date": "2016-06-15",
+      "invitationsIssued": 752,
+      "minimumCRS": 488,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 35,
+      "date": "2016-06-01",
+      "invitationsIssued": 762,
+      "minimumCRS": 483,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 34,
+      "date": "2016-05-18",
+      "invitationsIssued": 763,
+      "minimumCRS": 484,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 33,
+      "date": "2016-05-06",
+      "invitationsIssued": 799,
+      "minimumCRS": 534,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 32,
+      "date": "2016-04-20",
+      "invitationsIssued": 1018,
+      "minimumCRS": 468,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 31,
+      "date": "2016-04-06",
+      "invitationsIssued": 954,
+      "minimumCRS": 470,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 30,
+      "date": "2016-03-23",
+      "invitationsIssued": 1014,
+      "minimumCRS": 470,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 29,
+      "date": "2016-03-09",
+      "invitationsIssued": 1013,
+      "minimumCRS": 473,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 28,
+      "date": "2016-02-24",
+      "invitationsIssued": 1484,
+      "minimumCRS": 453,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 27,
+      "date": "2016-02-10",
+      "invitationsIssued": 1505,
+      "minimumCRS": 459,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 26,
+      "date": "2016-01-27",
+      "invitationsIssued": 1468,
+      "minimumCRS": 457,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 25,
+      "date": "2016-01-13",
+      "invitationsIssued": 1518,
+      "minimumCRS": 453,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 24,
+      "date": "2016-01-06",
+      "invitationsIssued": 1463,
+      "minimumCRS": 461,
+      "category": "Aucun programme spécifié",
+      "year": "2016"
+    },
+    {
+      "drawNumber": 23,
+      "date": "2015-12-18",
+      "invitationsIssued": 1503,
+      "minimumCRS": 460,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 22,
+      "date": "2015-12-04",
+      "invitationsIssued": 1451,
+      "minimumCRS": 461,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 21,
+      "date": "2015-11-27",
+      "invitationsIssued": 1559,
+      "minimumCRS": 472,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 20,
+      "date": "2015-11-13",
+      "invitationsIssued": 1506,
+      "minimumCRS": 484,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 19,
+      "date": "2015-10-23",
+      "invitationsIssued": 1502,
+      "minimumCRS": 489,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 18,
+      "date": "2015-10-02",
+      "invitationsIssued": 1530,
+      "minimumCRS": 450,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 17,
+      "date": "2015-09-18",
+      "invitationsIssued": 1545,
+      "minimumCRS": 450,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 16,
+      "date": "2015-09-08",
+      "invitationsIssued": 1517,
+      "minimumCRS": 459,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 15,
+      "date": "2015-08-21",
+      "invitationsIssued": 1523,
+      "minimumCRS": 456,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 14,
+      "date": "2015-08-07",
+      "invitationsIssued": 1402,
+      "minimumCRS": 471,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 13,
+      "date": "2015-07-17",
+      "invitationsIssued": 1581,
+      "minimumCRS": 451,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 12,
+      "date": "2015-07-10",
+      "invitationsIssued": 1516,
+      "minimumCRS": 463,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 11,
+      "date": "2015-06-26",
+      "invitationsIssued": 1575,
+      "minimumCRS": 469,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 10,
+      "date": "2015-06-12",
+      "invitationsIssued": 1501,
+      "minimumCRS": 482,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 9,
+      "date": "2015-05-22",
+      "invitationsIssued": 1361,
+      "minimumCRS": 755,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 8,
+      "date": "2015-04-17",
+      "invitationsIssued": 715,
+      "minimumCRS": 453,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 7,
+      "date": "2015-04-10",
+      "invitationsIssued": 925,
+      "minimumCRS": 469,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 6,
+      "date": "2015-03-27",
+      "invitationsIssued": 1637,
+      "minimumCRS": 453,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 5,
+      "date": "2015-03-20",
+      "invitationsIssued": 1620,
+      "minimumCRS": 481,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 4,
+      "date": "2015-02-27",
+      "invitationsIssued": 1187,
+      "minimumCRS": 735,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 3,
+      "date": "2015-02-20",
+      "invitationsIssued": 849,
+      "minimumCRS": 808,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 2,
+      "date": "2015-02-07",
+      "invitationsIssued": 779,
+      "minimumCRS": 818,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    },
+    {
+      "drawNumber": 1,
+      "date": "2015-01-31",
+      "invitationsIssued": 779,
+      "minimumCRS": 886,
+      "category": "Aucun programme spécifié",
+      "year": "2015"
+    }
+  ]
+}
