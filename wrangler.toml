@@ -1,4 +1,4 @@
-name = "can-ee-draws"
+name = "ee-backend"
 main = "dist/worker.js"
 compatibility_date = "2024-01-01"
 
@@ -6,4 +6,4 @@ compatibility_date = "2024-01-01"
 command = "npm run build"
 
 [env.production]
-name = "can-ee-draws-prod"
+name = "ee-backend"

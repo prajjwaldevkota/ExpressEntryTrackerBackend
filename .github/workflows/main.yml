@@ -1,0 +1,55 @@
+name: Draws Update
+
+on:
+  schedule:
+    - cron: "*/15 10-18 * * 1-6" # At every 15th minute past every hour from 10 through 17 on every day-of-week from Monday through Friday.
+  workflow_dispatch: # Add manual trigger
+
+jobs:
+  update-draws:
+    runs-on: ubuntu-latest
+    env:
+      TZ: "America/Toronto"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run extractor
+        run: node ./scripts/extractor.js
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --exit-code --quiet ./data/ee-draws.json || echo "changes=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git stash
+          git pull
+          git stash pop
+          git add ./data
+          git commit -m '[bot] Update latest draws'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+
+      - name: No changes needed
+        if: steps.check_changes.outputs.changes != 'true'
+        run: echo "✅ Checked for new draws - repository is up to date"
