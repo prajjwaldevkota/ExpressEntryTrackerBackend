@@ -48,7 +48,7 @@ jobs:
           git commit -m '[bot] Update latest draws'
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: No changes needed
         if: steps.check_changes.outputs.changes != 'true'
