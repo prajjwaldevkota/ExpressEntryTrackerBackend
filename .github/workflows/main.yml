@@ -39,16 +39,11 @@ jobs:
       - name: Commit and push changes
         if: steps.check_changes.outputs.changes == 'true'
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git stash
-          git pull
-          git stash pop
-          git add ./data
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add ./data/ee-draws.json ./data/ee-draws-fr.json ./data/distribution.json pnpm-lock.yaml
           git commit -m '[bot] Update latest draws'
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
 
       - name: No changes needed
         if: steps.check_changes.outputs.changes != 'true'
