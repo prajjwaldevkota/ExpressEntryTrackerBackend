@@ -1,6 +1,14 @@
 {
   "draws": [
     {
+      "drawNumber": 382,
+      "date": "2025-11-28",
+      "invitationsIssued": 6000,
+      "minimumCRS": 408,
+      "category": "Compétence linguistique en français (Version 1)",
+      "year": "2025"
+    },
+    {
       "drawNumber": 381,
       "date": "2025-11-26",
       "invitationsIssued": 1000,
