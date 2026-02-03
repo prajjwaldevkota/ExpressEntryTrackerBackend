@@ -1,6 +1,14 @@
 {
   "draws": [
     {
+      "drawNumber": 393,
+      "date": "2026-02-03",
+      "invitationsIssued": 423,
+      "minimumCRS": 749,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
       "drawNumber": 392,
       "date": "2026-01-21",
       "invitationsIssued": 6000,
