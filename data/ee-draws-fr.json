@@ -1,6 +1,14 @@
 {
   "draws": [
     {
+      "drawNumber": 402,
+      "date": "2026-03-05",
+      "invitationsIssued": 250,
+      "minimumCRS": 429,
+      "category": "Cadres supérieurs/cadres supérieures ayant de l’expérience de travail au Canada 2026-version 1",
+      "year": "2026"
+    },
+    {
       "drawNumber": 401,
       "date": "2026-03-04",
       "invitationsIssued": 5500,
