@@ -25,16 +25,17 @@ const scoreRanges = [
 function mapCategory(irccCategory) {
   const categoryMappings = [
     { pattern: /provincial nominee program/i, category: "PNP" },
-    { pattern: /french language proficiency/i, category: "French" },
+    { pattern: /french[- ]language proficiency/i, category: "French" },
     { pattern: /canadian experience class/i, category: "CEC" },
     { pattern: /healthcare/i, category: "Healthcare" },
     { pattern: /trade/i, category: "Trades" },
     { pattern: /stem/i, category: "STEM" },
     { pattern: /transport/i, category: "Transport" },
     { pattern: /agriculture|agri-food/i, category: "Agriculture" },
-    { pattern: /^general$/i, category: "General" },
-    { pattern: /^education$/i, category: "Education" },
+    { pattern: /general/i, category: "General" },
+    { pattern: /education/i, category: "Education" },
     { pattern: /no program specified|aucun programme spécifié/i, category: null },
+    { pattern: /senior.*manager.*work.*experience/i, category: "Manager CWE" },
   ];
 
   const match = categoryMappings.find((mapping) =>
@@ -169,7 +170,7 @@ async function main() {
     let frAdded = 0;
 
     for (const irccDraw of irccData.fr.rounds) {
-      console.log(parseInt(irccDraw.drawNumber,10));
+      console.log(parseInt(irccDraw.drawNumber, 10));
       const drawNumber = parseInt(irccDraw.drawNumber, 10);
       const exists = existingDataFr.draws.some((d) => d.drawNumber === drawNumber);
       if (!exists) {

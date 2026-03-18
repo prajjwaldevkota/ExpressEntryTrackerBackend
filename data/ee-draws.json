@@ -21,7 +21,7 @@
       "date": "2026-03-05",
       "invitationsIssued": 250,
       "minimumCRS": 429,
-      "category": null,
+      "category": "Manager CWE",
       "year": "2026"
     },
     {
@@ -29,7 +29,7 @@
       "date": "2026-03-04",
       "invitationsIssued": 5500,
       "minimumCRS": 397,
-      "category": null,
+      "category": "French",
       "year": "2026"
     },
     {
@@ -85,7 +85,7 @@
       "date": "2026-02-06",
       "invitationsIssued": 8500,
       "minimumCRS": 400,
-      "category": null,
+      "category": "French",
       "year": "2026"
     },
     {
@@ -301,7 +301,7 @@
       "date": "2025-09-17",
       "invitationsIssued": 2500,
       "minimumCRS": 462,
-      "category": null,
+      "category": "Education",
       "year": "2025"
     },
     {
@@ -885,7 +885,7 @@
       "date": "2024-04-23",
       "invitationsIssued": 2095,
       "minimumCRS": 529,
-      "category": null,
+      "category": "General",
       "year": "2024"
     },
     {
@@ -901,7 +901,7 @@
       "date": "2024-04-10",
       "invitationsIssued": 1280,
       "minimumCRS": 549,
-      "category": null,
+      "category": "General",
       "year": "2024"
     },
     {
@@ -917,7 +917,7 @@
       "date": "2024-03-25",
       "invitationsIssued": 1980,
       "minimumCRS": 524,
-      "category": null,
+      "category": "General",
       "year": "2024"
     },
     {
@@ -933,7 +933,7 @@
       "date": "2024-03-12",
       "invitationsIssued": 2850,
       "minimumCRS": 525,
-      "category": null,
+      "category": "General",
       "year": "2024"
     },
     {
@@ -949,7 +949,7 @@
       "date": "2024-02-28",
       "invitationsIssued": 1470,
       "minimumCRS": 534,
-      "category": null,
+      "category": "General",
       "year": "2024"
     },
     {
@@ -973,7 +973,7 @@
       "date": "2024-02-13",
       "invitationsIssued": 1490,
       "minimumCRS": 535,
-      "category": null,
+      "category": "General",
       "year": "2024"
     },
     {
@@ -989,7 +989,7 @@
       "date": "2024-01-31",
       "invitationsIssued": 730,
       "minimumCRS": 541,
-      "category": null,
+      "category": "General",
       "year": "2024"
     },
     {
@@ -997,7 +997,7 @@
       "date": "2024-01-23",
       "invitationsIssued": 1040,
       "minimumCRS": 543,
-      "category": null,
+      "category": "General",
       "year": "2024"
     },
     {
@@ -1005,7 +1005,7 @@
       "date": "2024-01-10",
       "invitationsIssued": 1510,
       "minimumCRS": 546,
-      "category": null,
+      "category": "General",
       "year": "2024"
     },
     {
@@ -1037,7 +1037,7 @@
       "date": "2023-12-18",
       "invitationsIssued": 1325,
       "minimumCRS": 542,
-      "category": null,
+      "category": "General",
       "year": "2023"
     },
     {
@@ -1061,7 +1061,7 @@
       "date": "2023-12-06",
       "invitationsIssued": 4750,
       "minimumCRS": 561,
-      "category": null,
+      "category": "General",
       "year": "2023"
     },
     {
@@ -1085,7 +1085,7 @@
       "date": "2023-10-24",
       "invitationsIssued": 1548,
       "minimumCRS": 776,
-      "category": null,
+      "category": "PNP",
       "year": "2023"
     },
     {
@@ -1253,7 +1253,7 @@
       "date": "2023-05-10",
       "invitationsIssued": 589,
       "minimumCRS": 691,
-      "category": null,
+      "category": "PNP",
       "year": "2023"
     },
     {
@@ -1301,7 +1301,7 @@
       "date": "2023-03-01",
       "invitationsIssued": 667,
       "minimumCRS": 748,
-      "category": null,
+      "category": "PNP",
       "year": "2023"
     },
     {
@@ -1309,7 +1309,7 @@
       "date": "2023-02-15",
       "invitationsIssued": 699,
       "minimumCRS": 791,
-      "category": null,
+      "category": "PNP",
       "year": "2023"
     },
     {
@@ -1325,7 +1325,7 @@
       "date": "2023-02-01",
       "invitationsIssued": 893,
       "minimumCRS": 733,
-      "category": null,
+      "category": "PNP",
       "year": "2023"
     },
     {
