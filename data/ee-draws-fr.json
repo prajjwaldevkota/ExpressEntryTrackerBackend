@@ -1,6 +1,14 @@
 {
   "draws": [
     {
+      "drawNumber": 422,
+      "date": "2026-06-25",
+      "invitationsIssued": 4000,
+      "minimumCRS": 475,
+      "category": "Professions de la santé et des services sociaux 2026-version 3",
+      "year": "2026"
+    },
+    {
       "drawNumber": 421,
       "date": "2026-06-24",
       "invitationsIssued": 271,
