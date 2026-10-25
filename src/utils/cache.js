@@ -1,81 +1,47 @@
-// Cloudflare Workers optimized cache with TTL
-class Cache {
-  constructor() {
+export class Cache {
+  constructor({ maxSize = 128, defaultTTL = 5 * 60 * 1000, now = Date.now } = {}) {
+    if (!Number.isInteger(maxSize) || maxSize < 1) throw new Error("Invalid cache size");
     this.cache = new Map();
-    this.defaultTTL = 5 * 60 * 1000; // 5 minutes
-    this.maxSize = 1000; // Prevent memory issues in Cloudflare
+    this.maxSize = maxSize;
+    this.defaultTTL = defaultTTL;
+    this.now = now;
   }
 
   set(key, value, ttl = this.defaultTTL) {
-    // Prevent cache from growing too large
-    if (this.cache.size >= this.maxSize) {
-      this.evictOldest();
-    }
-
-    this.cache.set(key, {
-      value,
-      timestamp: Date.now(),
-      ttl
-    });
+    this.cache.delete(key);
+    if (ttl <= 0) return;
+    this.pruneExpired();
+    if (this.cache.size >= this.maxSize) this.evictOldest();
+    this.cache.set(key, { value, expiresAt: this.now() + ttl });
   }
 
   get(key) {
     const item = this.cache.get(key);
     if (!item) return null;
-
-    const isExpired = Date.now() - item.timestamp > item.ttl;
-    if (isExpired) {
+    if (this.now() >= item.expiresAt) {
       this.cache.delete(key);
       return null;
     }
-
     return item.value;
   }
 
-  delete(key) {
-    this.cache.delete(key);
-  }
-
-  clear() {
-    this.cache.clear();
-  }
-
-  // Evict oldest entries when cache is full
-  evictOldest() {
-    let oldestKey = null;
-    let oldestTime = Date.now();
-
-    for (const [key, item] of this.cache.entries()) {
-      if (item.timestamp < oldestTime) {
-        oldestTime = item.timestamp;
-        oldestKey = key;
-      }
-    }
-
-    if (oldestKey) {
-      this.cache.delete(oldestKey);
+  delete(key) { this.cache.delete(key); }
+  clear() { this.cache.clear(); }
+  evictOldest() { this.cache.delete(this.cache.keys().next().value); }
+  pruneExpired() {
+    const now = this.now();
+    for (const [key, item] of this.cache) {
+      if (now >= item.expiresAt) this.cache.delete(key);
     }
   }
-
-  // Get cache stats
   getStats() {
-    return {
-      size: this.cache.size,
-      maxSize: this.maxSize,
-      keys: Array.from(this.cache.keys()).slice(0, 10) // Only show first 10 keys
-    };
+    this.pruneExpired();
+    return { size: this.cache.size, maxSize: this.maxSize };
   }
 }
 
-// Create singleton instance
 export const cache = new Cache();
-
-// Cache key generators
-export const generateCacheKey = (endpoint, params = {}) => {
-  const sortedParams = Object.keys(params)
-    .sort()
-    .map(key => `${key}:${params[key]}`)
-    .join('|');
-  
-  return `${endpoint}${sortedParams ? `?${sortedParams}` : ''}`;
-}; 
+export const generateCacheKey = (endpoint, params = {}) => JSON.stringify([
+  endpoint,
+  Object.entries(params).filter(([, value]) => value !== undefined).sort(([a], [b]) => a.localeCompare(b)),
+]);

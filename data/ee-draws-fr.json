@@ -1,6 +1,374 @@
 {
   "draws": [
     {
+      "drawNumber": 450,
+      "date": "2026-10-16",
+      "invitationsIssued": 5000,
+      "minimumCRS": 435,
+      "category": "Compétence linguistique en français 2026-Version 2",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 449,
+      "date": "2026-10-15",
+      "invitationsIssued": 2500,
+      "minimumCRS": 519,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 448,
+      "date": "2026-10-13",
+      "invitationsIssued": 752,
+      "minimumCRS": 772,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 447,
+      "date": "2026-10-01",
+      "invitationsIssued": 3500,
+      "minimumCRS": 476,
+      "category": "Métiers spécialisés 2026-Version 3",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 446,
+      "date": "2026-09-29",
+      "invitationsIssued": 2000,
+      "minimumCRS": 518,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 445,
+      "date": "2026-09-28",
+      "invitationsIssued": 733,
+      "minimumCRS": 725,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 444,
+      "date": "2026-09-16",
+      "invitationsIssued": 250,
+      "minimumCRS": 389,
+      "category": "Cadres supérieurs/cadres supérieures ayant de l’expérience de travail au Canada 2026-version 1",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 443,
+      "date": "2026-09-15",
+      "invitationsIssued": 2000,
+      "minimumCRS": 519,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 442,
+      "date": "2026-09-14",
+      "invitationsIssued": 576,
+      "minimumCRS": 734,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 441,
+      "date": "2026-09-04",
+      "invitationsIssued": 3500,
+      "minimumCRS": 475,
+      "category": "Professions de la santé et des services sociaux 2026-version 3",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 440,
+      "date": "2026-09-03",
+      "invitationsIssued": 229,
+      "minimumCRS": 198,
+      "category": "Médecins ayant de l’expérience de travail au Canada 2026-Version 1",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 439,
+      "date": "2026-09-01",
+      "invitationsIssued": 2000,
+      "minimumCRS": 521,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 438,
+      "date": "2026-08-31",
+      "invitationsIssued": 562,
+      "minimumCRS": 697,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 437,
+      "date": "2026-08-19",
+      "invitationsIssued": 5000,
+      "minimumCRS": 382,
+      "category": "Compétence linguistique en français 2026-Version 2",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 436,
+      "date": "2026-08-18",
+      "invitationsIssued": 1000,
+      "minimumCRS": 523,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 435,
+      "date": "2026-08-17",
+      "invitationsIssued": 442,
+      "minimumCRS": 760,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 434,
+      "date": "2026-08-07",
+      "invitationsIssued": 300,
+      "minimumCRS": 470,
+      "category": "Métiers des transports 2026-Version 2",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 433,
+      "date": "2026-08-06",
+      "invitationsIssued": 5000,
+      "minimumCRS": 391,
+      "category": "Compétence linguistique en français 2026-Version 2",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 432,
+      "date": "2026-08-05",
+      "invitationsIssued": 3000,
+      "minimumCRS": 516,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 431,
+      "date": "2026-08-04",
+      "invitationsIssued": 507,
+      "minimumCRS": 768,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 430,
+      "date": "2026-07-23",
+      "invitationsIssued": 4,
+      "minimumCRS": 368,
+      "category": "Recrues militaires qualifiées, 2026-Version 1",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 429,
+      "date": "2026-07-22",
+      "invitationsIssued": 5000,
+      "minimumCRS": 399,
+      "category": "Compétence linguistique en français 2026-Version 2",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 428,
+      "date": "2026-07-21",
+      "invitationsIssued": 2000,
+      "minimumCRS": 516,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 427,
+      "date": "2026-07-20",
+      "invitationsIssued": 511,
+      "minimumCRS": 744,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 426,
+      "date": "2026-07-10",
+      "invitationsIssued": 500,
+      "minimumCRS": 392,
+      "category": "Cadres supérieurs/cadres supérieures ayant de l’expérience de travail au Canada 2026-version 1",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 425,
+      "date": "2026-07-09",
+      "invitationsIssued": 5000,
+      "minimumCRS": 420,
+      "category": "Compétence linguistique en français 2026-Version 2",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 424,
+      "date": "2026-07-07",
+      "invitationsIssued": 2000,
+      "minimumCRS": 517,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 423,
+      "date": "2026-07-06",
+      "invitationsIssued": 534,
+      "minimumCRS": 708,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 422,
+      "date": "2026-06-25",
+      "invitationsIssued": 4000,
+      "minimumCRS": 475,
+      "category": "Professions de la santé et des services sociaux 2026-version 3",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 421,
+      "date": "2026-06-24",
+      "invitationsIssued": 271,
+      "minimumCRS": 223,
+      "category": "Médecins ayant de l’expérience de travail au Canada 2026-Version 1",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 420,
+      "date": "2026-06-23",
+      "invitationsIssued": 4000,
+      "minimumCRS": 516,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 419,
+      "date": "2026-06-22",
+      "invitationsIssued": 955,
+      "minimumCRS": 730,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 418,
+      "date": "2026-05-28",
+      "invitationsIssued": 4500,
+      "minimumCRS": 409,
+      "category": "Compétence linguistique en français 2026-Version 2",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 417,
+      "date": "2026-05-27",
+      "invitationsIssued": 3000,
+      "minimumCRS": 518,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 416,
+      "date": "2026-05-25",
+      "invitationsIssued": 334,
+      "minimumCRS": 805,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 415,
+      "date": "2026-05-11",
+      "invitationsIssued": 380,
+      "minimumCRS": 798,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 414,
+      "date": "2026-04-29",
+      "invitationsIssued": 4000,
+      "minimumCRS": 400,
+      "category": "Compétence linguistique en français 2026-Version 2",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 413,
+      "date": "2026-04-28",
+      "invitationsIssued": 2000,
+      "minimumCRS": 514,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 412,
+      "date": "2026-04-27",
+      "invitationsIssued": 473,
+      "minimumCRS": 795,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 411,
+      "date": "2026-04-15",
+      "invitationsIssued": 4000,
+      "minimumCRS": 419,
+      "category": "Compétence linguistique en français 2026-Version 2",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 410,
+      "date": "2026-04-14",
+      "invitationsIssued": 2000,
+      "minimumCRS": 515,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 409,
+      "date": "2026-04-13",
+      "invitationsIssued": 324,
+      "minimumCRS": 786,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 408,
+      "date": "2026-04-02",
+      "invitationsIssued": 3000,
+      "minimumCRS": 477,
+      "category": "Métiers spécialisés 2026-Version 3",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 407,
+      "date": "2026-03-31",
+      "invitationsIssued": 2250,
+      "minimumCRS": 509,
+      "category": "Catégorie de l’expérience canadienne",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 406,
+      "date": "2026-03-30",
+      "invitationsIssued": 356,
+      "minimumCRS": 802,
+      "category": "Programme des candidats des provinces",
+      "year": "2026"
+    },
+    {
+      "drawNumber": 405,
+      "date": "2026-03-18",
+      "invitationsIssued": 4000,
+      "minimumCRS": 393,
+      "category": "Compétence linguistique en français 2026-Version 2",
+      "year": "2026"
+    },
+    {
       "drawNumber": 404,
       "date": "2026-03-17",
       "invitationsIssued": 4000,
@@ -2506,10 +2874,20 @@
     },
     {
       "drawNumber": 91,
+      "roundId": "91b",
       "date": "2018-05-30",
       "invitationsIssued": 200,
       "minimumCRS": 902,
       "category": "Programme des candidats des provinces",
+      "year": "2018"
+    },
+    {
+      "drawNumber": 91,
+      "roundId": "91a",
+      "date": "2018-05-30",
+      "invitationsIssued": 500,
+      "minimumCRS": 288,
+      "category": "Programme des travailleurs de métiers spécialisés (fédéral)",
       "year": "2018"
     },
     {

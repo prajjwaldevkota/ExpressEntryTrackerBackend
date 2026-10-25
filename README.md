@@ -1,129 +1,82 @@
-
 # Canada Express Entry Draws API
 
-A RESTful API service that provides access to historical data of Canada's Express Entry draws. This API helps track and analyze Express Entry draw patterns, including CRS scores, invitation numbers, category-specific draws, and candidate pool distribution.
+A public, read-only Hono API on Cloudflare Workers for bilingual IRCC draw history and CRS pool snapshots. Datasets are bundled at build time; refreshing JSON files requires a deployment before the live API changes.
 
-### 🎉 Check out my app to see more Canada immigration related features
+## Development
 
-[![Download on the App Store](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg)](https://apps.apple.com/us/app/immime/id6745764350)
+Use Node.js 22.12 or newer and npm. The committed `package-lock.json` is the dependency source of truth.
 
-
-## 🌟 Features
-
-- Retrieve all Express Entry draws
-- Filter draws by year and category
-- Get the latest draw (closest to today's date)
-- View CRS score distribution in the candidate pool
-- Automated updates via GitHub Actions
-- Deployed on Cloudflare Workers
-
-## 🚀 API Endpoints
-
-### Base URL
-
-```
-https://can-ee-draws.karanjit-sagun01.workers.dev
+```sh
+npm ci
+npm run dev
+npm run check
 ```
 
-### Available Endpoints
+Commands:
 
-1. **Get All Draws**
+- `npm test`: API, cache, and importer regression tests with Node's built-in test runner.
+- `npm run validate:data`: schema, unique round identifiers, bilingual consistency, and pool-to-draw checks.
+- `npm run update:data`: download and validate official English/French feeds, apply corrections, retain history, and backfill pool snapshots.
+- `npm run build`: generate `dist/worker.js`.
+- `npm exec wrangler -- deploy --dry-run`: check Worker packaging without publishing.
+- `npm run deploy`: build and publish to the Cloudflare account you authenticate with Wrangler.
 
-   ```
-   GET /draws
-   ```
+Local development uses the URL printed by Wrangler. Deployment uses the Worker name in `wrangler.toml`; use your own deployed URL for production requests.
 
-   Query Parameters:
+## API
 
-   - `year` (optional): Filter draws by year (e.g., 2023, 2024)
-   - `category` (optional): Filter draws by category (e.g., PNP, CEC, French, Healthcare)
+| Method | Path | Response |
+| --- | --- | --- |
+| GET | `/` | Version, routes and language information |
+| GET | `/api/draws` | `{ draws, pagination }`, newest round first |
+| GET | `/api/draws/latest` | `{ draw }`, most recent draw on or before today in UTC; `{}` when absent |
+| GET | `/api/categories` | `{ categories }`, ordered by frequency |
+| GET | `/api/pool` | `{ pool }`, latest available pool snapshot |
+| GET | `/api/pool/progress` | `{ pool: { current, previous } }`, latest two available snapshots |
+| GET | `/api/stats` | Cache size, timings and serialized data sizes for the current Worker isolate |
 
-2. **Get Latest Draw**
+`/api/draws` accepts:
 
-   ```
-   GET /draws/latest
-   ```
+| Parameter | Default | Accepted values |
+| --- | --- | --- |
+| `lang` | `en` | `en` or `fr` |
+| `year` | All years | Exactly four digits |
+| `category` | All categories | Case-insensitive category label or English code; 1–200 characters |
+| `page` | `1` | Positive integer, maximum 90071992547409 |
+| `limit` | `50` | Integer from 1 to 100 |
 
-   Returns the draw closest to today's date
+`lang` also applies to latest-draw and category endpoints. English category codes work with French data, for example `/api/draws?lang=fr&category=PNP`. Returned category labels stay in the selected language. Unknown filters return an empty array. Invalid query values return HTTP 400:
 
-3. **Get Candidate Pool Distribution**
-   ```
-   GET /pool
-   ```
-   Returns the current CRS score distribution of candidates in the Express Entry pool
+```json
+{ "error": { "code": "INVALID_QUERY", "message": "lang must be en or fr" } }
+```
 
-### API Documentation
+Unknown routes return JSON with HTTP 404; unexpected failures return a generic HTTP 500. Successful responses retain the existing `draws`, `draw`, `categories`, and `pool` envelopes. Pagination includes `page`, `limit`, `totalDraws`, `totalPages`, `hasNext`, and `hasPrev`.
 
-For detailed API documentation, visit: [https://can-ee-draws.workers.dev/api/docs](https://can-ee-draws.workers.dev/api/docs)
+Draws contain numeric `drawNumber`, ISO `date`, numeric `invitationsIssued` and `minimumCRS`, nullable `category`, and string `year`. IRCC's historical rounds 91a and 91b share numeric `drawNumber: 91` and have an additional `roundId` field; use `roundId ?? String(drawNumber)` as a unique identifier. Pool snapshots use the same identifiers and retain formatted string counts in `ranges`. A pool snapshot's `drawDate` identifies its associated round, not the date the candidate counts were measured. Missing source snapshots are skipped rather than fabricated.
 
-## 💻 Local Development
+CORS allows public GET/HEAD access without credentials. JSON responses include `nosniff`. Successful responses can be cached by clients for 60 seconds; errors and stats use `no-store`. `X-Cache-Hit` reports the application cache on draws/latest endpoints; `X-Response-Time` measures handler time. Monitoring values are per isolate and reset on restart; serialized sizes are not heap measurements.
 
-1. Clone the repository
+## Data updates
 
-   ```bash
-   git clone https://github.com/yourusername/can-ee-draws.git
-   cd can-ee-draws
-   ```
+Sources: [English IRCC feed](https://www.canada.ca/content/dam/ircc/documents/json/ee_rounds_123_en.json) and [French IRCC feed](https://www.canada.ca/content/dam/ircc/documents/json/ee_rounds_123_fr.json).
 
-2. Install dependencies
+The updater checks HTTP status, limits downloads to 10 MB, times out after 15 seconds per attempt, and retries transient failures up to three times. Invalid dates, counts, duplicate identifiers, or mismatched bilingual snapshots fail the command with a nonzero exit code before writing. Existing malformed files also fail instead of being replaced with empty history.
 
-   ```bash
-   pnpm install
-   ```
+All outputs are validated before writing. Each changed file is replaced atomically; replacement of the three files is sequential, not a filesystem transaction. CI validates their consistency before committing. Source corrections replace old values, unseen categories keep their source name, and unchanged updates do not rewrite files.
 
-3. Start the development server
+## GitHub Actions and deployment
 
-   ```bash
-   pnpm dev
-   ```
+- Pull requests and pushes to `main` run data validation, regression tests, the bundle build, a production dependency audit, and Wrangler packaging checks.
+- The data workflow runs every 30 minutes from 12:00 through 23:30 UTC on weekdays and can be started manually. It checks all three datasets, commits changed files only after checks pass, and pushes to `main`.
+- Set repository variable `CLOUDFLARE_ACCOUNT_ID` and repository secret `CLOUDFLARE_API_TOKEN` to enable deployments. Scope the token to Workers deployment in your account.
+- Code pushes to `main` deploy after checks pass. The data workflow deploys explicitly after its bot commit, because commits using `GITHUB_TOKEN` do not trigger push workflows.
+- Without the account variable, deployment is skipped. Repository branch protection must permit the data bot's direct push, or adapt the workflow to your pull request process.
 
-4. Build the project
+Secrets belong in GitHub/Cloudflare settings or ignored local `.dev.vars` files. Never commit tokens. Data updates and code deployments share a concurrency group and check out the latest `main` when they start, preventing competing workflow deployments.
 
-   ```bash
-   pnpm build
-   ```
+Miniflare's Undici dependency is overridden to a patched compatible 7.x release. Recheck the override when upgrading Wrangler and remove it once Miniflare includes the patched version.
 
-5. Deploy to Cloudflare Workers
-   ```bash
-   pnpm deploy
-   ```
+## License
 
-## 🔄 Automated Workflows
-
-### GitHub Actions
-
-1. **Pull Request Checks**
-
-   - Automatically runs build checks on pull requests
-   - Ensures code quality before merging
-
-2. **Automated Deployment**
-   - Automatically deploys to Cloudflare Workers when code is pushed to main
-   - Runs data updates every 30 minutes during business hours (UTC 10:00-17:00, Mon-Fri)
-
-## 📦 Tech Stack
-
-- Hono - Lightweight web framework
-- Cloudflare Workers - Edge computing platform
-- pnpm - Package manager
-- Rollup - Module bundler
-- GitHub Actions - CI/CD and automation
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Data source: [IRCC Express Entry Draws](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/submit-profile/rounds-invitations.html)
-- Inspired by the need for easy access to Express Entry draw history
+MIT — see [LICENSE](LICENSE).

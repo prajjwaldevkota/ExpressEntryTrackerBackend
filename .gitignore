@@ -136,3 +136,7 @@ dist
 .pnp.*
 
 .wrangler
+.DS_Store
+.dev.vars
+.dev.vars.*
+.env.*

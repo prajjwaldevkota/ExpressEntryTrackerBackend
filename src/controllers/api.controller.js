@@ -1,6 +1,8 @@
-const getApiInfo = (c) => {
+import packageInfo from "../../package.json" with { type: "json" };
+
+export const getApiInfo = (c) => {
   return c.json({
-    version: "2.1.0",
+    version: packageInfo.version,
     name: "Canada Express Entry Draws API",
     description: "API for accessing Canada Express Entry draw history with bilingual support",
     features: {
@@ -10,8 +12,8 @@ const getApiInfo = (c) => {
     endpoints: {
       draws: {
         path: "/api/draws",
-        description: "Get all draws with optional year and category filters",
-        parameters: ["year", "category", "lang"],
+        description: "Get draws, newest first, with filters and pagination (default 50, maximum 100 per page)",
+        parameters: ["year", "category", "lang", "page", "limit"],
         examples: [
           "/api/draws?year=2024",
           "/api/draws?category=PNP&lang=fr",
@@ -20,7 +22,7 @@ const getApiInfo = (c) => {
       },
       latest: {
         path: "/api/draws/latest",
-        description: "Get the draw closest to today's date",
+        description: "Get the most recent draw on or before today (UTC)",
         parameters: ["lang"],
         examples: [
           "/api/draws/latest",
@@ -62,8 +64,4 @@ const getApiInfo = (c) => {
       french: "IRCC French Express Entry Rounds"
     }
   });
-};
-
-module.exports = {
-  getApiInfo,
 };

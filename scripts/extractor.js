@@ -1,206 +1,178 @@
-import { writeFile, readFile } from "node:fs/promises";
-import https from "node:https";
+import { writeFile, readFile, rename, unlink } from "node:fs/promises";
+import { fileURLToPath, pathToFileURL } from "node:url";
+import { join } from "node:path";
+import { randomUUID } from "node:crypto";
+import { setTimeout as delay } from "node:timers/promises";
+import { assertDate, parseInteger, scoreRanges, validateDatasets, validateDraws, validateDistributions } from "./lib/data-schema.js";
+import { drawId, newestFirst } from "../src/utils/draws.js";
 
-const scoreRanges = [
-  { key: "dd1", range: "601-1200" },
-  { key: "dd2", range: "501-600" },
-  { key: "dd3", range: "451-500" },
-  { key: "dd4", range: "491-500" },
-  { key: "dd5", range: "481-490" },
-  { key: "dd6", range: "471-480" },
-  { key: "dd7", range: "461-470" },
-  { key: "dd8", range: "451-460" },
-  { key: "dd9", range: "401-450" },
-  { key: "dd10", range: "441-450" },
-  { key: "dd11", range: "431-440" },
-  { key: "dd12", range: "421-430" },
-  { key: "dd13", range: "411-420" },
-  { key: "dd14", range: "401-410" },
-  { key: "dd15", range: "351-400" },
-  { key: "dd16", range: "301-350" },
-  { key: "dd17", range: "0-300" },
-  { key: "dd18", range: "Total" },
-];
+const sources = {
+  en: "https://www.canada.ca/content/dam/ircc/documents/json/ee_rounds_123_en.json",
+  fr: "https://www.canada.ca/content/dam/ircc/documents/json/ee_rounds_123_fr.json",
+};
 
-function mapCategory(irccCategory) {
-  const categoryMappings = [
-    { pattern: /provincial nominee program/i, category: "PNP" },
-    { pattern: /french[- ]language proficiency/i, category: "French" },
-    { pattern: /canadian experience class/i, category: "CEC" },
-    { pattern: /healthcare/i, category: "Healthcare" },
-    { pattern: /trade/i, category: "Trades" },
-    { pattern: /stem/i, category: "STEM" },
-    { pattern: /transport/i, category: "Transport" },
-    { pattern: /agriculture|agri-food/i, category: "Agriculture" },
-    { pattern: /general/i, category: "General" },
-    { pattern: /education/i, category: "Education" },
-    { pattern: /no program specified|aucun programme spécifié/i, category: null },
-    { pattern: /senior.*manager.*work.*experience/i, category: "Manager CWE" },
+export function mapCategory(name) {
+  const mappings = [
+    [/provincial nominee program/i, "PNP"],
+    [/french[- ]language proficiency/i, "French"],
+    [/canadian experience class/i, "CEC"],
+    [/physician/i, "Physicians"],
+    [/healthcare/i, "Healthcare"],
+    [/federal skilled trades/i, "FST"],
+    [/trade/i, "Trades"],
+    [/stem/i, "STEM"],
+    [/transport/i, "Transport"],
+    [/agriculture|agri-food/i, "Agriculture"],
+    [/general/i, "General"],
+    [/education/i, "Education"],
+    [/no program specified|aucun programme spécifié/i, null],
+    [/senior.*manager.*work.*experience/i, "Manager CWE"],
+    [/federal skilled worker/i, "FSW"],
   ];
-
-  const match = categoryMappings.find((mapping) =>
-    mapping.pattern.test(irccCategory)
-  );
-  return match ? match.category : null;
+  // Preserve new category names instead of silently discarding them.
+  const match = mappings.find(([pattern]) => pattern.test(name));
+  return match ? match[1] : name;
 }
 
-async function fetchData(urlEn, urlFr) {
-  const fetchSingleData = (url) =>
-    new Promise((resolve, reject) => {
-      https
-        .get(url, (res) => {
-          let data = "";
-          res.on("data", (chunk) => (data += chunk));
-          res.on("end", () => {
-            try {
-              resolve(JSON.parse(data));
-            } catch (e) {
-              reject(e);
-            }
-          });
-        })
-        .on("error", reject);
-    });
-
-  const [enData, frData] = await Promise.all([fetchSingleData(urlEn), fetchSingleData(urlFr)]);
-  return { en: enData, fr: frData };
+function identifier(value) {
+  const text = String(value);
+  if (!/^[1-9]\d*[a-z]?$/.test(text)) throw new Error(`Invalid draw number: ${value}`);
+  const drawNumber = parseInteger(text.replace(/[a-z]$/, ""), "draw number", { min: 1 });
+  return { drawNumber, ...(/[a-z]$/.test(text) ? { roundId: text } : {}) };
 }
 
-function convertDrawFormat(irccDraw, lang = "en") {
-  const cleanDrawSize = irccDraw.drawSize.replace(/[, ]/g, "");
-  const cleanDrawCRS = irccDraw.drawCRS.replace(/[, ]/g, "");
-
+export function convertDrawFormat(draw, lang = "en") {
+  assertDate(draw.drawDate);
+  if (typeof draw.drawName !== "string" || !draw.drawName.trim()) throw new Error("Missing draw name");
   return {
-    drawNumber: parseInt(irccDraw.drawNumber, 10),
-    date: irccDraw.drawDate,
-    invitationsIssued: parseInt(cleanDrawSize, 10),
-    minimumCRS: parseInt(cleanDrawCRS, 10),
-    category: lang === "fr" ? irccDraw.drawName : mapCategory(irccDraw.drawName),
-    year: new Date(irccDraw.drawDate).getFullYear().toString(),
+    ...identifier(draw.drawNumber),
+    date: draw.drawDate,
+    invitationsIssued: parseInteger(draw.drawSize, "invitations"),
+    minimumCRS: parseInteger(draw.drawCRS, "CRS", { max: 1200 }),
+    category: lang === "fr" ? draw.drawName.trim() : mapCategory(draw.drawName.trim()),
+    year: draw.drawDate.slice(0, 4),
   };
 }
 
-function mapDrawDistribution(draw) {
+export function mapDrawDistribution(draw) {
+  // Older rounds may lack pool snapshots. Missing values are unknown, not zero.
+  if (scoreRanges.some(({ key }) => draw[key] === undefined || draw[key] === null || String(draw[key]).trim() === "")) {
+    return null;
+  }
   return {
-    drawNumber: parseInt(draw.drawNumber, 10),
+    ...identifier(draw.drawNumber),
     drawDate: draw.drawDate,
-    ranges: scoreRanges.map((range) => ({
-      key: range.key,
-      range: range.range,
-      value: draw[range.key] || "0",
-    })),
+    ranges: scoreRanges.map(({ key, range }) => {
+      parseInteger(draw[key], key);
+      return { key, range, value: String(draw[key]).trim() };
+    }),
   };
 }
 
-async function readJsonFile(path, defaultValue) {
-  try {
-    const content = await readFile(path, "utf8");
-    if (content.trim()) return JSON.parse(content);
-    return defaultValue;
-  } catch {
-    return defaultValue;
+export async function fetchJson(url, { fetchImpl = fetch, attempts = 3, timeoutMs = 15000 } = {}) {
+  for (let attempt = 0; attempt < attempts; attempt++) {
+    try {
+      const response = await fetchImpl(url, { signal: AbortSignal.timeout(timeoutMs) });
+      if (!response.ok) {
+        await response.body?.cancel();
+        const error = new Error(`IRCC returned HTTP ${response.status}`);
+        error.permanent = response.status !== 429 && response.status < 500;
+        throw error;
+      }
+      if (!response.body) throw new Error("IRCC response has no body");
+      const reader = response.body.getReader();
+      const chunks = [];
+      let size = 0;
+      try {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          size += value.byteLength;
+          if (size > 10 * 1024 * 1024) throw new Error("IRCC response exceeds 10 MB");
+          chunks.push(value);
+        }
+      } finally {
+        await reader.cancel();
+      }
+      return JSON.parse(Buffer.concat(chunks).toString("utf8"));
+    } catch (error) {
+      if (error.permanent || attempt === attempts - 1) throw error;
+      await delay(500 * 2 ** attempt);
+    }
   }
 }
 
-async function writeJsonFile(path, data) {
-  await writeFile(path, JSON.stringify(data, null, 2), "utf8");
-}
-
-async function updateDistributionFile(newDistributions) {
-  const distributionPath = "./data/distribution.json";
-  const existingDistributions = await readJsonFile(distributionPath, []);
-
-  // Filter out distributions that already exist to avoid duplicates
-  const existingDrawNumbers = new Set(existingDistributions.map((d) => d.drawNumber));
-
-  const filteredNew = newDistributions.filter((dist) => !existingDrawNumbers.has(dist.drawNumber));
-
-  if (filteredNew.length === 0) {
-    console.log("No new distributions to add");
-    return;
-  }
-
-  const updatedDistributions = [...filteredNew, ...existingDistributions];
-  await writeJsonFile(distributionPath, updatedDistributions);
-  console.log(`✅ Added ${filteredNew.length} new distribution records`);
-}
-
-async function main() {
+async function readJson(path, fallback) {
   try {
-    // Load existing English and French data (or initialize)
-    const existingDataEn = await readJsonFile("./data/ee-draws.json", { draws: [] });
-    const existingDataFr = await readJsonFile("./data/ee-draws-fr.json", { draws: [] });
-
-    const irccData = await fetchData(
-      "https://www.canada.ca/content/dam/ircc/documents/json/ee_rounds_123_en.json",
-      "https://www.canada.ca/content/dam/ircc/documents/json/ee_rounds_123_fr.json"
-    );
-
-    if (!irccData.en.rounds || irccData.en.rounds.length === 0) {
-      console.log("No draws found in IRCC English data");
-      return;
-    }
-    if (!irccData.fr.rounds || irccData.fr.rounds.length === 0) {
-      console.log("No draws found in IRCC French data");
-      return;
-    }
-
-    // Process English draws
-    let enAdded = 0;
-    const newDistributions = [];
-
-    for (const irccDraw of irccData.en.rounds) {
-      const drawNumber = parseInt(irccDraw.drawNumber, 10);
-      const exists = existingDataEn.draws.some((d) => d.drawNumber === drawNumber);
-      if (!exists) {
-        const newDraw = convertDrawFormat(irccDraw);
-        existingDataEn.draws.push(newDraw);
-        enAdded++;
-        newDistributions.push(mapDrawDistribution(irccDraw));
-      }
-    }
-
-    if (enAdded > 0) {
-      existingDataEn.draws.sort((a, b) => b.drawNumber - a.drawNumber);
-      await writeJsonFile("./data/ee-draws.json", existingDataEn);
-      console.log(`✅ Added ${enAdded} English draws`);
-    }
-
-    // Process French draws
-    let frAdded = 0;
-
-    for (const irccDraw of irccData.fr.rounds) {
-      console.log(parseInt(irccDraw.drawNumber, 10));
-      const drawNumber = parseInt(irccDraw.drawNumber, 10);
-      const exists = existingDataFr.draws.some((d) => d.drawNumber === drawNumber);
-      if (!exists) {
-        const newDraw = convertDrawFormat(irccDraw, "fr");
-        existingDataFr.draws.push(newDraw);
-        frAdded++;
-      }
-    }
-
-    if (frAdded > 0) {
-      existingDataFr.draws.sort((a, b) => b.drawNumber - a.drawNumber);
-      await writeJsonFile("./data/ee-draws-fr.json", existingDataFr);
-      console.log(`✅ Added ${frAdded} French draws`);
-    }
-
-    // Update distribution file for English draws only (or French if you uncomment above)
-    if (newDistributions.length > 0) {
-      await updateDistributionFile(newDistributions);
-    } else {
-      console.log("No new distributions to update");
-    }
-
-    if (enAdded === 0 && frAdded === 0) {
-      console.log("No new draws to add");
-    } else {
-      console.log(`Successfully processed ${enAdded} English and ${frAdded} French draws`);
-    }
+    return JSON.parse(await readFile(path, "utf8"));
   } catch (error) {
-    console.error("Error:", error.message);
+    if (error.code === "ENOENT") return fallback;
+    // Malformed existing files must never be treated as empty history.
+    throw error;
   }
 }
 
-main();
+const merge = (existing, incoming) => {
+  const suffixed = new Set(incoming.filter(record => record.roundId).map(record => record.drawNumber));
+  const retained = existing.filter(record => record.roundId || !suffixed.has(record.drawNumber));
+  return [...new Map([...retained, ...incoming].map(record => [drawId(record), record])).values()].sort(newestFirst);
+};
+
+async function writeJson(path, data) {
+  const content = JSON.stringify(data, null, 2) + "\n";
+  try {
+    if (await readFile(path, "utf8") === content) return false;
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+  const temporary = `${path}.${randomUUID()}.tmp`;
+  try {
+    await writeFile(temporary, content, { encoding: "utf8", flag: "wx" });
+    await rename(temporary, path);
+  } finally {
+    await unlink(temporary).catch(error => { if (error.code !== "ENOENT") throw error; });
+  }
+  return true;
+}
+
+export async function updateData({
+  dataDir = fileURLToPath(new URL("../data/", import.meta.url)),
+  fetchImpl = fetch,
+} = {}) {
+  const names = ["ee-draws.json", "ee-draws-fr.json", "distribution.json"];
+  const [en, fr, distributions] = await Promise.all(names.map((name, i) =>
+    readJson(join(dataDir, name), i === 2 ? [] : { draws: [] })));
+  // Validate existing files separately so a corrected feed can repair historical
+  // disagreements between languages, while malformed files still stop the job.
+  if (!Array.isArray(en.draws) || !Array.isArray(fr.draws)) throw new Error("Invalid existing draw datasets");
+  if (en.draws.length) validateDraws(en, "existing English");
+  if (fr.draws.length) validateDraws(fr, "existing French");
+  validateDistributions(distributions);
+  const [rawEn, rawFr] = await Promise.all(Object.values(sources).map(url => fetchJson(url, { fetchImpl })));
+  if (!Array.isArray(rawEn.rounds) || !rawEn.rounds.length ||
+      !Array.isArray(rawFr.rounds) || !rawFr.rounds.length) throw new Error("IRCC returned empty or invalid rounds");
+  const incomingEn = { draws: rawEn.rounds.map(draw => convertDrawFormat(draw)) };
+  const incomingFr = { draws: rawFr.rounds.map(draw => convertDrawFormat(draw, "fr")) };
+  // Check the source snapshots before merging, so a partial bilingual update fails.
+  validateDraws(incomingEn, "IRCC English");
+  validateDraws(incomingFr, "IRCC French");
+  validateDatasets(incomingEn, incomingFr, []);
+  const updatedEn = { ...en, draws: merge(en.draws, incomingEn.draws) };
+  const updatedFr = { ...fr, draws: merge(fr.draws, incomingFr.draws) };
+  const updatedDistributions = merge(distributions, rawEn.rounds.map(mapDrawDistribution).filter(Boolean));
+  // Validate every output before writing any file. Each file is replaced atomically.
+  validateDatasets(updatedEn, updatedFr, updatedDistributions);
+  const outputs = [updatedEn, updatedFr, updatedDistributions];
+  const changed = [];
+  for (let i = 0; i < names.length; i++) {
+    if (await writeJson(join(dataDir, names[i]), outputs[i])) changed.push(names[i]);
+  }
+  return { changed, draws: updatedEn.draws.length, distributions: updatedDistributions.length };
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  updateData().then(result => console.log(JSON.stringify(result))).catch(error => {
+    console.error("Data update failed:", error.message);
+    process.exitCode = 1;
+  });
+}

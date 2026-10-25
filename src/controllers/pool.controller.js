@@ -1,47 +1,16 @@
-const drawsData = require("../../data/distribution.json");
+import drawsData from "../../data/distribution.json" with { type: "json" };
+import { newestFirst } from "../utils/draws.js";
 
-const getPoolStats = (c) => {
-  if (!drawsData || !Array.isArray(drawsData) || drawsData.length === 0) {
-    return c.status(404).json({ error: "No data found" });
-  }
+// Data is bundled, so ordering can be computed once per Worker isolate.
+const snapshots = [...drawsData].sort(newestFirst);
+const notFound = c => c.json({
+  error: { code: "NOT_FOUND", message: "No pool data found" },
+}, 404);
 
-  const latestDraw = drawsData.reduce((latest, current) => {
-    return current.drawNumber > latest.drawNumber ? current : latest;
-  }, drawsData[0]);
+export const getPoolStats = c => snapshots.length
+  ? c.json({ pool: snapshots[0] })
+  : notFound(c);
 
-  return c.json({ pool: latestDraw });
-};
-
-const getPoolProgress = (c) => {
-  if (!drawsData || !Array.isArray(drawsData) || drawsData.length === 0) {
-    return c.status(404).json({ error: "No data found" });
-  }
-
-  const sortedDraws = [...drawsData].sort(
-    (a, b) => b.drawNumber - a.drawNumber
-  );
-
-  const [current, previous] = sortedDraws.slice(0, 2);
-
-  const comparison = {
-    current: {
-      drawNumber: current.drawNumber,
-      drawDate: current.drawDate,
-      ranges: current.ranges,
-    },
-    previous: previous
-      ? {
-          drawNumber: previous.drawNumber,
-          drawDate: previous.drawDate,
-          ranges: previous.ranges,
-        }
-      : null,
-  };
-
-  return c.json({ pool: comparison });
-};
-
-module.exports = {
-  getPoolStats,
-  getPoolProgress,
-};
+export const getPoolProgress = c => snapshots.length
+  ? c.json({ pool: { current: snapshots[0], previous: snapshots[1] || null } })
+  : notFound(c);

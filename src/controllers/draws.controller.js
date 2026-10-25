@@ -1,59 +1,27 @@
 import { cache, generateCacheKey } from "../utils/cache.js";
 import { getDrawsWithPagination, getLatestDrawOptimized } from "../utils/dataLoader.js";
+import { getDrawQuery, getLanguage } from "../utils/query.js";
 
-const getDraws = async (c) => {
-  const year = c.req.query("year");
-  const category = c.req.query("category");
-  const lang = c.req.query("lang") || "en";
-  const page = parseInt(c.req.query("page")) || 1;
-  const limit = parseInt(c.req.query("limit")) || 50;
-
-  // Generate cache key based on parameters
-  const cacheKey = generateCacheKey('draws', { year, category, lang, page, limit });
-  const cachedResult = cache.get(cacheKey);
-  
-  if (cachedResult) {
-    return c.json(cachedResult);
+const cached = async (c, key, loader, ttl) => {
+  let result = cache.get(key);
+  c.header("X-Cache-Hit", String(result !== null));
+  if (result === null) {
+    result = await loader();
+    cache.set(key, result, ttl);
   }
-
-  try {
-    const result = await getDrawsWithPagination(page, limit, {
-      year,
-      category,
-      lang
-    });
-
-    // Cache for 5 minutes
-    cache.set(cacheKey, result, 5 * 60 * 1000);
-    return c.json(result);
-  } catch (error) {
-    console.error("Error fetching draws:", error);
-    return c.json({ draws: [], pagination: { page, limit, totalDraws: 0, totalPages: 0 } }, 500);
-  }
+  return c.json(result);
 };
 
-const getLatestDraw = async (c) => {
-  const lang = c.req.query("lang") || "en";
-  
-  // Generate cache key
-  const cacheKey = generateCacheKey('latest_draw', { lang });
-  const cachedResult = cache.get(cacheKey);
-  
-  if (cachedResult) {
-    return c.json(cachedResult);
-  }
-
-  try {
-    const latestDraw = await getLatestDrawOptimized(lang);
-    const result = { draw: latestDraw };
-    
-    // Cache for 2 minutes since this changes frequently
-    cache.set(cacheKey, result, 2 * 60 * 1000);
-    return c.json(result);
-  } catch (error) {
-    console.error("Error fetching latest draw:", error);
-    return c.json({ draw: {} }, 500);
-  }
+export const getDraws = async c => {
+  const query = getDrawQuery(c);
+  return cached(c, generateCacheKey("draws", query),
+    () => getDrawsWithPagination(query.page, query.limit, query));
 };
 
-export { getDraws, getLatestDraw };
+export const getLatestDraw = async c => {
+  const lang = getLanguage(c);
+  // Include the UTC day so future-dated records become visible at midnight.
+  const day = new Date().toISOString().slice(0, 10);
+  return cached(c, generateCacheKey("latest_draw", { lang, day }),
+    async () => ({ draw: await getLatestDrawOptimized(lang) }), 2 * 60 * 1000);
+};
