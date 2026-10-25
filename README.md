@@ -4,7 +4,7 @@ A public, read-only Hono API on Cloudflare Workers for bilingual IRCC draw histo
 
 ## Development
 
-Use Node.js 22.12 or newer and npm. The committed `package-lock.json` is the dependency source of truth.
+Use Node.js 22 (selected by `.node-version`) and npm 10.9.2 (pinned in `packageManager`). Cloudflare Builds and GitHub Actions use these versions. The committed `package-lock.json` is the dependency source of truth.
 
 ```sh
 npm ci
@@ -75,7 +75,7 @@ All outputs are validated before writing. Each changed file is replaced atomical
 
 Secrets belong in GitHub/Cloudflare settings or ignored local `.dev.vars` files. Never commit tokens. Data updates and code deployments share a concurrency group and check out the latest `main` when they start, preventing competing workflow deployments.
 
-Miniflare's Undici dependency is overridden to a patched compatible 7.x release. Recheck the override when upgrading Wrangler and remove it once Miniflare includes the patched version.
+Undici is overridden to a patched compatible 7.x release for Miniflare. Keep the override at the package name level: the scoped override produced a lockfile that npm 11 accepted but npm 10 rejected with `Missing: undici@7.29.1`. Regenerate the lockfile with the pinned npm version, and recheck the override when upgrading Wrangler.
 
 ## License
 
