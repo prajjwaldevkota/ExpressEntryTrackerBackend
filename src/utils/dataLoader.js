@@ -44,7 +44,8 @@ export const findLatestDraw = (draws, now = new Date()) => {
 export const getLatestDrawOptimized = async (lang = "en") => findLatestDraw(datasets[lang].draws);
 
 // Serialized sizes describe the data, not the runtime's heap allocation.
-export const getMemoryStats = () => ({
+let serializedSizes;
+export const getMemoryStats = () => serializedSizes ??= Object.freeze({
   compressed: false,
   englishDataBytes: new TextEncoder().encode(JSON.stringify(datasets.en)).byteLength,
   frenchDataBytes: new TextEncoder().encode(JSON.stringify(datasets.fr)).byteLength,

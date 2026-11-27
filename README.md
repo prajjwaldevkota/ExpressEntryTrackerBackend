@@ -1,6 +1,8 @@
-# Canada Express Entry Draws API
+# Express Entry Cutoff Tracker
 
 A public, read-only Hono API on Cloudflare Workers for bilingual IRCC draw history and CRS pool snapshots. Datasets are bundled at build time; refreshing JSON files requires a deployment before the live API changes.
+
+Open `/tracker` to compare the last ten rounds in a category. The page defaults to the category of the latest published draw. The cutoff change is measured in CRS points against the preceding round in that category. Use the language link to switch between English and French while keeping the selected category. The page works without JavaScript or additional upstream requests.
 
 ## Development
 
@@ -28,6 +30,8 @@ Local development uses the URL printed by Wrangler. Deployment uses the Worker n
 | Method | Path | Response |
 | --- | --- | --- |
 | GET | `/` | Version, routes and language information |
+| GET | `/tracker` | Bilingual tracker page |
+| GET | `/api/tracker` | Selected category, category options, up to ten rounds, and cutoff change (null without a prior round). Accepts `lang` and a category code from `categories`. |
 | GET | `/api/draws` | `{ draws, pagination }`, newest round first |
 | GET | `/api/draws/latest` | `{ draw }`, most recent draw on or before today in UTC; `{}` when absent |
 | GET | `/api/categories` | `{ categories }`, ordered by frequency |

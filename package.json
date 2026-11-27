@@ -1,7 +1,7 @@
 {
   "name": "can-ee-draws",
   "version": "2.0.0",
-  "description": "A lightweight API for tracking Canada's Express Entry draw history.",
+  "description": "Bilingual Express Entry cutoff tracker and historical draw API.",
   "type": "module",
   "main": "src/worker.js",
   "engines": { "node": ">=22.12.0" },
@@ -16,7 +16,6 @@
     "check": "npm run validate:data && npm test && npm run build"
   },
   "keywords": [],
-  "author": "Sagun Karanjit",
   "license": "MIT",
   "dependencies": {
     "hono": "^4.13.13"

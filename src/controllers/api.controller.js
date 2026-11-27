@@ -3,13 +3,19 @@ import packageInfo from "../../package.json" with { type: "json" };
 export const getApiInfo = (c) => {
   return c.json({
     version: packageInfo.version,
-    name: "Canada Express Entry Draws API",
+    name: "Express Entry Cutoff Tracker",
     description: "API for accessing Canada Express Entry draw history with bilingual support",
     features: {
       bilingual: "Supports English and French data",
       language_parameter: "Use ?lang=fr for French data, ?lang=en or omit for English",
     },
     endpoints: {
+      tracker: {
+        path: "/api/tracker",
+        description: "Latest cutoff change and ten recent rounds for one category",
+        parameters: ["lang", "category"],
+        examples: ["/api/tracker?category=CEC", "/tracker?lang=fr"],
+      },
       draws: {
         path: "/api/draws",
         description: "Get draws, newest first, with filters and pagination (default 50, maximum 100 per page)",

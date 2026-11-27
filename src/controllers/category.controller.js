@@ -1,8 +1,11 @@
 import { loadData } from "../utils/dataLoader.js";
 import { getLanguage } from "../utils/query.js";
 
+const categoriesByLanguage = new Map();
+
 export const getCategories = async c => {
   const lang = getLanguage(c);
+  if (categoriesByLanguage.has(lang)) return c.json({ categories: categoriesByLanguage.get(lang) });
   const data = await loadData();
   const counts = new Map();
   for (const { category } of data[lang].draws) {
@@ -10,5 +13,6 @@ export const getCategories = async c => {
   }
   const categories = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .map(([category]) => category);
+  categoriesByLanguage.set(lang, categories);
   return c.json({ categories });
 };

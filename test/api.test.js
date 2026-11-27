@@ -116,3 +116,46 @@ test("unknown routes use JSON errors and HEAD/preflight remain supported", async
   assert.equal(preflight.status, 204);
   assert.match(preflight.headers.get("access-control-allow-methods"), /GET/);
 });
+
+test("tracker compares the latest published rounds within the same category in either language", async () => {
+  const today = new Date().toISOString().slice(0, 10);
+  const expected = en.draws.filter(draw => draw.category === "CEC" && draw.date <= today)
+    .sort((a, b) => b.date.localeCompare(a.date) || b.drawNumber - a.drawNumber).slice(0, 10);
+  for (const lang of ["en", "fr"]) {
+    const result = await (await request("/api/tracker?category=cec&lang=" + lang)).json();
+    assert.deepEqual(result.history.map(drawId), expected.map(drawId));
+    assert.equal(result.category.code, "CEC");
+    assert.equal(result.category.label, result.history[0].category);
+    assert.equal(result.change, expected[0].minimumCRS - expected[1].minimumCRS);
+  }
+  assert.equal((await request("/api/tracker?category=unknown")).status, 400);
+  assert.equal((await request("/tracker?lang=de")).status, 400);
+});
+
+test("tracker defaults to the latest draw category and renders a shareable French page", async () => {
+  const latest = findLatestDraw(en.draws);
+  const result = await (await request("/api/tracker")).json();
+  assert.equal(drawId(result.history[0]), drawId(latest));
+  const response = await request("/tracker?lang=fr&category=PNP");
+  assert.equal(response.status, 200);
+  assert.equal(response.headers.get("content-language"), "fr");
+  assert.match(response.headers.get("content-type"), /text\/html/);
+  const body = await response.text();
+  assert.match(body, /<html lang="fr">/);
+  assert.match(body, /<option value="PNP" selected>/);
+  assert.match(body, /href="\/tracker\?lang=en&amp;category=PNP"/);
+  assert.match(body, /Dernier seuil du SCG/);
+});
+
+test("tracker reuses normalized category requests and keeps language and invalid results separate", async () => {
+  cache.clear();
+  const first = await request("/tracker?category=CEC");
+  assert.equal(first.headers.get("x-cache-hit"), "false");
+  const repeat = await request("/tracker?category=%20cec%20");
+  assert.equal(repeat.headers.get("x-cache-hit"), "true");
+  assert.equal(await first.text(), await repeat.text());
+  assert.equal((await request("/tracker?category=CEC&lang=fr")).headers.get("x-cache-hit"), "false");
+  const size = cache.getStats().size;
+  assert.equal((await request("/tracker?category=unknown")).status, 400);
+  assert.equal(cache.getStats().size, size);
+});

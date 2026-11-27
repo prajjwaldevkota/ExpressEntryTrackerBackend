@@ -8,6 +8,7 @@ import { getDraws, getLatestDraw } from "./controllers/draws.controller.js";
 import { requestLogger, performanceStats } from "./middleware/logger.js";
 import { getMemoryStats } from "./utils/dataLoader.js";
 import { cache } from "./utils/cache.js";
+import { getTracker, showTracker } from "./controllers/tracker.controller.js";
 
 const app = new Hono();
 app.use("*", cors({
@@ -25,6 +26,8 @@ app.use("*", async (c, next) => {
 });
 
 app.get("/", getApiInfo);
+app.get("/tracker", showTracker);
+app.get("/api/tracker", getTracker);
 app.get("/api/categories", getCategories);
 app.get("/api/pool", getPoolStats);
 app.get("/api/pool/progress", getPoolProgress);
