@@ -68,10 +68,10 @@ All outputs are validated before writing. Each changed file is replaced atomical
 ## GitHub Actions and deployment
 
 - Pull requests and pushes to `main` run data validation, regression tests, the bundle build, a production dependency audit, and Wrangler packaging checks.
-- The data workflow runs every 30 minutes from 12:00 through 23:30 UTC on weekdays and can be started manually. It checks all three datasets, commits changed files only after checks pass, and pushes to `main`.
+- The data workflow requests a poll once an hour from 12:17 through 23:17 UTC on weekdays (12 scheduled polls per weekday) and can be started manually. GitHub may delay scheduled starts. The run summary records the latest bundled round and minimum CRS. Unchanged scheduled polls skip dependency installation and the build. The updater validates all three datasets, commits changed files only after checks pass, and pushes to `main`.
 - Set repository variable `CLOUDFLARE_ACCOUNT_ID` and repository secret `CLOUDFLARE_API_TOKEN` to enable deployments. Scope the token to Workers deployment in your account.
 - Code pushes to `main` deploy after checks pass. The data workflow deploys explicitly after its bot commit, because commits using `GITHUB_TOKEN` do not trigger push workflows.
-- Without the account variable, deployment is skipped. Repository branch protection must permit the data bot's direct push, or adapt the workflow to your pull request process.
+- A manual update also redeploys unchanged data when deployment is enabled, so it can recover a failed publish. Without the account variable, deployment is skipped. Repository branch protection must permit the data bot's direct push, or adapt the workflow to your pull request process.
 
 Secrets belong in GitHub/Cloudflare settings or ignored local `.dev.vars` files. Never commit tokens. Data updates and code deployments share a concurrency group and check out the latest `main` when they start, preventing competing workflow deployments.
 

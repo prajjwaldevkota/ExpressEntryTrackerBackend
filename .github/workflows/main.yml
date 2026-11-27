@@ -2,8 +2,8 @@ name: Update draw data
 
 on:
   schedule:
-    # Every 30 minutes, 12:00–23:30 UTC on weekdays (covers Toronto business hours).
-    - cron: "*/30 12-23 * * 1-5"
+    # Poll off the hour during the weekday publication window.
+    - cron: "17 12-23 * * 1-5"
   workflow_dispatch:
 
 permissions:
@@ -25,27 +25,42 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
+      - name: Refresh IRCC datasets
+        run: node scripts/extractor.js
+      - name: Report latest score and check for changes
+        id: datasets
+        env:
+          ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          node --input-type=commonjs -e 'const d = require("./data/ee-draws.json").draws[0]; console.log("Latest bundled round " + (d.roundId ?? d.drawNumber) + " (" + d.date + "), minimum CRS " + d.minimumCRS)' >> "$GITHUB_STEP_SUMMARY"
+          if git diff --quiet -- data/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "IRCC refresh produced no dataset changes." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "IRCC refresh changed the datasets." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          if [[ -z "$ACCOUNT_ID" ]]; then
+            echo "Worker deployment is disabled in this workflow (CLOUDFLARE_ACCOUNT_ID is unset)." >> "$GITHUB_STEP_SUMMARY"
+          fi
       - run: npm install --global npm@10.9.2
+        if: steps.datasets.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && vars.CLOUDFLARE_ACCOUNT_ID != '')
       - run: npm ci
-      - run: npm run update:data
+        if: steps.datasets.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && vars.CLOUDFLARE_ACCOUNT_ID != '')
       - run: npm run check
+        if: steps.datasets.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && vars.CLOUDFLARE_ACCOUNT_ID != '')
       - name: Commit changed datasets
-        id: commit
+        if: steps.datasets.outputs.changed == 'true'
         run: |
           git add -- data/ee-draws.json data/ee-draws-fr.json data/distribution.json
-          if git diff --cached --quiet; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           git commit -m '[bot] Update Express Entry datasets'
           git push origin HEAD:main
-          echo "changed=true" >> "$GITHUB_OUTPUT"
       # GITHUB_TOKEN commits do not trigger push workflows. A configured deployment
       # runs here explicitly so refreshed bundled data reaches the live Worker.
       - name: Deploy refreshed data
-        if: steps.commit.outputs.changed == 'true' && vars.CLOUDFLARE_ACCOUNT_ID != ''
+        if: vars.CLOUDFLARE_ACCOUNT_ID != '' && (steps.datasets.outputs.changed == 'true' || github.event_name == 'workflow_dispatch')
         run: npm run deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
